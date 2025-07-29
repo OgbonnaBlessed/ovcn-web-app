@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import NavigationMenuDemo from "./NavigationMenu"
 import { SidebarTrigger } from '../ui/sidebar'
+import { ModeToggle } from './ToggleTheme'
 
 const Navbar = () => {
     return (
@@ -31,6 +32,10 @@ const Navbar = () => {
                 <div className='hidden md:block'>
                     <NavigationMenuDemo />
                 </div>
+
+                <div className='hidden md:block absolute top-3 right-3'>
+                    <ModeToggle />
+                </div>    
             </div>
         </div>
     )

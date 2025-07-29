@@ -28,6 +28,7 @@ import {
   CollapsibleTrigger,
 } from "../ui/collapsible";
 import { useState } from "react";
+import { ModeToggle } from "./ToggleTheme";
 
 const AppSidebar = () => {
     const pathname = usePathname();
@@ -176,7 +177,9 @@ const AppSidebar = () => {
                     </SidebarMenu>
                 </SidebarContent>
 
-                <SidebarFooter>{/* Add footer controls if needed */}</SidebarFooter>
+                <SidebarFooter>
+                    <ModeToggle />
+                </SidebarFooter>
             </Sidebar>
         </div>
     );
