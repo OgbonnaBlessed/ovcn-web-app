@@ -4,7 +4,9 @@ import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
+  SidebarHeader,
   SidebarMenu,
+  SidebarMenuButton,
   SidebarMenuItem,
   SidebarMenuSub,
   SidebarMenuSubItem,
@@ -17,6 +19,7 @@ import {
   BookOpen,
   Wallet,
   ChevronRight,
+  PanelLeft,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -90,6 +93,22 @@ const AppSidebar = () => {
                 className="bg-white border-none shadow-md"
                 style={{ height: "100vh" }}
             >
+                <SidebarHeader>
+                    <SidebarMenu className='mt-5 group-data-[collapsible=icon]:mt-7'>
+                        <SidebarMenuItem>
+                            <SidebarMenuButton
+                                size="lg"
+                                onClick={() => toggleSidebar()}
+                                className='group'
+                            >
+                                <div className='w-full flex justify-end items-center gap-5 pl-3 pr-1 h-10 group-data-[collapsible=icon]:ml-1 group-data-[collapsible=icon]:w-10 group-data-[collapsible=icon]:px-0 group'>
+                                    <PanelLeft className='text-gray-400 w-5 h-5 group-data-[collapsible=icon]:hidden cursor-pointer' />
+                                </div>
+                            </SidebarMenuButton>
+                        </SidebarMenuItem>
+                    </SidebarMenu>
+                </SidebarHeader>
+
                 <SidebarContent>
                     <SidebarMenu className="mt-6 space-y-1">
                         {navLinks.map((link, index) => {

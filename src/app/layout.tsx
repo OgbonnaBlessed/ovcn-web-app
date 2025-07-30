@@ -1,19 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { DM_Sans } from "next/font/google"
 import "./globals.css";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import AppSidebar from "@/components/shared/AppSidebar";
 import { ThemeProvider } from "@/components/shared/theme-provider";
+import Navbar from "@/components/shared/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const dmSans = DM_Sans({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+  display: "swap",
+  variable: "--font-dm-sans",
+})
 
 export const metadata: Metadata = {
   title: "Omega Vision Christian Network",
@@ -35,8 +32,11 @@ export default function RootLayout({
       >
         <AppSidebar />
         <html lang="en" suppressHydrationWarning>
-          <body className={`${geistSans.variable} ${geistMono.variable}`}>
+          <body className={`${dmSans.className}`}>
+            <Navbar />
+            <main className="min-h-screen">
               {children}
+            </main>
           </body>
         </html>
       </ThemeProvider>

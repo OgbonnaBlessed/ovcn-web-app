@@ -15,7 +15,7 @@ import {
 const components: { title: string; href: string; description: string }[] = [
     {
         title: "Who we are",
-        href: "/about-us/#",
+        href: "/about-us/#who-we-are",
         description:
         "Get to know who we are, and the role we play in the body of Christ.",
     },
@@ -37,17 +37,17 @@ const components: { title: string; href: string; description: string }[] = [
         description: "Come learn what drives us.",
     },
     {
-        title: "Find us",
-        href: "/about-us/#find-us",
-        description:
-        "Discover our fellowships near you.",
-    },
-    {
         title: "Leadership",
         href: "/about-us/#leadership",
         description:
         "Our Gifts of men.",
-    }
+    },
+    {
+        title: "Our Locations",
+        href: "/about-us/#our-locations",
+        description:
+        "Discover our fellowships near you.",
+    },
 ]
 
 const NavigationMenuDemo = () => {

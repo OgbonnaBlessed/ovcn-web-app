@@ -7,7 +7,7 @@ import { ModeToggle } from './ToggleTheme'
 
 const Navbar = () => {
     return (
-        <div className="w-full flex items-baseline justify-between lg:px-20 px-8 py-4 relative bg-white/20 backdrop-blur-sm">
+        <div className="w-full fixed flex items-baseline justify-between lg:px-20 px-8 py-4  bg-background/15 backdrop-blur-sm z-50">
             <Link 
                 href="/"
                 className='flex items-center gap-2'
@@ -17,6 +17,7 @@ const Navbar = () => {
                     width={60}
                     height={40}
                     alt='Logo'
+                    style={{ height: "auto" }}
                 />
                 <div className='max-md:text-xs max-lg:text-sm font-serif'>
                     <p className='uppercase'>Omega Vision Christian Network</p>
