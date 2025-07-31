@@ -19,7 +19,7 @@ const Navbar = () => {
                     alt='Logo'
                     style={{ height: "auto" }}
                 />
-                <div className='max-md:text-xs max-lg:text-sm font-serif'>
+                <div className='max-md:text-xs max-lg:text-sm'>
                     <p className='uppercase'>Omega Vision Christian Network</p>
                     <p>(The Adullam of destiny)</p>
                 </div>
