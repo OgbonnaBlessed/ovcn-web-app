@@ -1,8 +1,8 @@
-import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
 import React from "react";
 import ServicesCarousel from "@/components/shared/ServicesCarousel";
 import Footer from "@/components/shared/Footer";
+import Link from "next/link";
 
 const sundayImages = ["/sunday-1.jpeg", "/sunday-2.jpeg", "/sunday-3.jpeg"];
 const wednesdayImages = ["/wednesday-1.jpeg", "/wednesday-2.jpeg", "/wednesday-3.jpeg"];
@@ -16,17 +16,20 @@ const page = () => {
                     {/* Header Section */}
                     <section className="flex flex-col gap-14 mb-24">
                         <div className="flex md:flex-row flex-col gap-10 md:items-end items-start justify-between w-full">
-                            <div className="flex flex-col">
-                                <p className="lg:text-7xl text-5xl font-bold">Our Services</p>
+                            <div className="flex flex-col md:gap-4 gap-2">
+                                <h1 className="lg:text-7xl text-5xl font-bold">Our Services</h1>
                                 <p className="sm:text-lg text-sm lg:w-xl w-[20rem] max-w-full">
                                     You can be a part of us and be present in any of our services at Omega Vision Christian Network
                                 </p>
                             </div>
 
-                            <Button className="bg-blue-500 hover:bg-blue-500 flex items-center justify-center gap-5 text-white rounded-md cursor-pointer p-5 active:scale-90 transition-all duration-500 ease-in-out">
+                            <Link 
+                                href="/"
+                                className="bg-blue-500 hover:bg-blue-500 flex items-center justify-center gap-5 text-white rounded-md cursor-pointer px-6 py-4 active:scale-90 transition-all duration-500 ease-in-out"
+                            >
                                 <p>Join us online</p>
                                 <Play />
-                            </Button>
+                            </Link>
                         </div>
                     </section>
 

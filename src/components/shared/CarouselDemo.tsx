@@ -34,57 +34,27 @@ export function CarouselDApiDemo() {
     const pastors = [
         {
             name: "Apostle Gabriel Clement",
-            image: "/about-us.jpg",
+            image: "/apostle-gabriel-clement.jpeg",
             about:
             "Apostle Gabriel is the founder and senior pastor of OVCN, a passionate teacher of the Word, and a prophetic voice to the nations.",
         },
         {
             name: "Dr. Pastor Gabriel Priscillia",
-            image: "/about-us.jpg",
+            image: "/pastor-priscillia-gabriel.jpeg",
             about:
             "An optomerist and woman of God, Dr. Priscillia is a healing evangelist and intercessor, raising women of virtue and purpose.",
         },
         {
-            name: "Pastor Matthew Odia",
-            image: "/about-us.jpg",
-            about:
-            "A fervent preacher and passionate soul-winner, Pastor Matthew is committed to raising disciples grounded in the Word and full of the Spirit.",
-        },
-        {
             name: "Pastor Mark Williams",
-            image: "/about-us.jpg",
+            image: "/pastor-mark-williams.jpeg",
             about:
             "Pastor Mark is known for his deep insights into scripture and his compassionate shepherding, bringing clarity and direction to many lives.",
         },
         {
             name: "Pastor Ifeanyi Agwu",
-            image: "/about-us.jpg",
+            image: "/pastor-ify.jpeg",
             about:
             "With a strong pastoral heart and a burden for spiritual growth, Pastor Ifeanyi labors to see believers rooted in truth and love.",
-        },
-        {
-            name: "Pastor Matthew Williams",
-            image: "/about-us.jpg",
-            about:
-            "Pastor Matthew is a vibrant minister, passionate about building strong families and nurturing a culture of honor, faith, and prayer.",
-        },
-        {
-            name: "Pastor Sydney Marcus",
-            image: "/about-us.jpg",
-            about:
-            "A man of wisdom and vision, Pastor Sydney mentors young leaders, inspiring bold faith and unwavering devotion to God’s call.",
-        },
-        {
-            name: "Pastor Ibukun Odia",
-            image: "/about-us.jpg",
-            about:
-            "A dedicated children’s minister, Pastor Ibukun carries a divine grace for teaching young hearts and planting seeds of truth early in life.",
-        },
-        {
-            name: "Pastor Gabriel Olurotimi",
-            image: "/about-us.jpg",
-            about:
-            "The campus pastor at OVCN Ikorodu, Pastor Gabriel leads with zeal, fostering a vibrant fellowship of believers walking in light and power.",
         },
     ];
 

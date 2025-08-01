@@ -142,10 +142,10 @@ const NavigationMenuDemo = () => {
                         <ul className="grid w-[200px] gap-4">
                             <li>
                                 <NavigationMenuLink asChild>
-                                    <Link href="#" className="font-medium">Give online</Link>
+                                    <Link href="/give/#partnership" className="font-medium">Partner with us</Link>
                                 </NavigationMenuLink>
                                 <NavigationMenuLink asChild>
-                                    <Link href="#" className="font-medium">Partner with us</Link>
+                                    <Link href="/give/#give-online" className="font-medium">Give online</Link>
                                 </NavigationMenuLink>
                             </li>
                         </ul>

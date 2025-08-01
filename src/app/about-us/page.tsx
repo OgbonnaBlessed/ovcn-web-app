@@ -229,7 +229,7 @@ const AboutUs = () => {
                     id="leadership"
                     className="relative flex flex-col gap-10 lg:gap-20 py-24 lg:px-20 px-8 w-full"
                 >
-                    <div className="flex flex-col md:gap-6 gap-2 w-full">
+                    <div className="flex flex-col md:gap-4 gap-2 w-full">
                         <h2 className="lg:text-7xl text-5xl font-bold w-full">Leadership</h2>
                         <p className="text-base sm:text-lg">
                             Meet the spiritual leaders and mentors behind our ministry, equipped and ordained for this generation.
