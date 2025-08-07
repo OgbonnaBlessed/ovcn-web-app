@@ -120,7 +120,7 @@ const AboutClient = () => {
                     <div className="relative w-full text-lg leading-relaxed">
                         <div className="float-left mr-6 mb-6 w-full max-w-xs sm:w-72 sm:h-72 h-64 relative rounded-3xl overflow-hidden">
                             <Image
-                                src="/about-us.jpg"
+                                src="/history.jpg"
                                 fill
                                 alt="Early days"
                                 className="object-cover object-center"

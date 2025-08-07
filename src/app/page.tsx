@@ -27,7 +27,6 @@ const HomePage = () => {
         className="absolute top-0 left-0 w-full h-full object-cover"
         src="/home_video.mp4" // Ensure this is in your /public folder
         autoPlay
-        muted
         loop
         playsInline
       />
