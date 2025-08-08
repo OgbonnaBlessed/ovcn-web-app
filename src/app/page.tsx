@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import React from 'react';
 import { motion } from 'framer-motion';
 import type { Variants } from 'framer-motion';
+import Link from 'next/link';
 
 const HomePage = () => {
   // Moved inside to avoid server-client function passing issue
@@ -58,12 +59,20 @@ const HomePage = () => {
           variants={fadeInUp}
           className="flex items-center gap-5 mt-5"
         >
-          <Button className="cursor-pointer bg-white hover:bg-white text-black">
-            Plan to Attend
-          </Button>
-          <Button className="cursor-pointer bg-transparent hover:bg-transparent border-1 border-white text-white">
-            Prayer Request
-          </Button>
+          <Link
+            href="/online"
+          >
+            <Button className="cursor-pointer bg-white hover:bg-white text-black">
+              Join us online
+            </Button>
+          </Link>
+          <Link
+            href="/about-us"
+          >
+            <Button className="cursor-pointer bg-transparent hover:bg-transparent border-1 border-white text-white">
+              Learn more
+            </Button>
+          </Link>
         </motion.div>
       </div>
 

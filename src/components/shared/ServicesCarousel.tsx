@@ -83,8 +83,8 @@ const ServiceCarousel: React.FC<ServiceCarouselProps> = ({
             {/* Fixed Subtext Section */}
             <div
                 className={cn(
-                    "absolute bottom-10 text-white text-sm bg-black/60 px-4 py-2 rounded backdrop-blur-sm z-20",
-                    alignText === "right" ? "right-10 text-right" : "left-10 text-left"
+                    "absolute md:bottom-10 bottom-5 text-white md:text-sm text-xs bg-black/60 px-4 py-2 rounded backdrop-blur-sm z-20",
+                    alignText === "right" ? "md:right-10 right-5 text-right" : "md:left-10 left-5 text-left"
                 )}
             >
                 <p>{subtext}</p>

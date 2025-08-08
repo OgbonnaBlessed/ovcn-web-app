@@ -220,40 +220,28 @@ const AboutClient = () => {
                         </div>
 
                         <p>
-                            Our mission is clear and unwavering, to raise Kingdom giants. We are committed to shaping a generation
-                            that carries the presence, power, and principles of God into every sphere of life. Through sound teaching,
-                            discipleship, and consistent spiritual encounters, we equip men and women to grow in stature, wisdom, and
-                            alignment with divine purpose (Luke 2:52).
+                            Our vision is to be a radiant beacon of God’s light in a world overshadowed by darkness, illuminating hearts, transforming lives, and revealing the glory of Christ through the power of the Holy Spirit and the eternal Word of God. We are passionately committed to cultivating a spiritual atmosphere where people don’t just attend services, but encounter God in life-altering ways.
                         </p>
 
                         <p className="mt-4">
-                            We believe that every believer is called to impact their world with the life of Christ. That is why we
-                            intentionally create platforms for spiritual development, leadership training, and kingdom deployment. 
-                            In a world drowning in confusion and compromise, we strive to raise a people of clarity, conviction,
-                            and character, ambassadors of heaven, grounded in truth and aflame with purpose.
+                            We envision a generation awakened to divine purpose, rooted in truth, and burning with holy fire. A people whose lives echo the heartbeat of heaven, marked by deep intimacy with the Father, unwavering faith in Christ, and a vibrant partnership with the Spirit. Our desire is that every believer would grow into maturity, walking in authority, purity, and love, and boldly advancing the Kingdom of God wherever they are planted.
                         </p>
 
-                        {/* Left-aligned image toward the end */}
                         <div className="md:float-right md:ml-6 mt-6 mb-6 w-full max-w-xs sm:w-72 sm:h-72 h-64 relative rounded-3xl overflow-hidden">
                             <Image
                                 src="/vision-2.jpeg"
                                 fill
-                                alt="Discipleship and growth"
+                                alt="Spiritual Growth"
                                 className="object-cover object-center"
                             />
                         </div>
 
                         <p className="mt-4">
-                            Everything we do is centered on Christ and fueled by the Spirit. From local gatherings to global outreaches,
-                            from quiet mentorship to mass impartation, our mission flows through every channel of our ministry. We are
-                            building a legacy of transformed lives, aligned with Heaven’s agenda and equipped to advance God’s kingdom
-                            on earth (Matthew 6:10).
+                            At Omega Vision Christian Network, we are building more than a congregation, we are raising a movement. A Spirit-led community where the hurting are healed, the lost are found, and destinies are activated. Our vision is to see families restored, cities impacted, and nations discipled through a church alive with God’s presence and filled with His power.
                         </p>
 
                         <p className="mt-4">
-                            We are not just raising followers, we are raising voices, vessels, and visionaries. This is more than a
-                            mandate; it is a movement. And we invite you to walk with us as we build lives, shape destinies, and
-                            establish the reign of Christ in every heart, home, and nation.
+                            We believe that revival is not just an event, but a lifestyle, lived daily by yielded vessels who reflect God’s glory in character, conduct, and calling. Through every gathering, outreach, and discipleship effort, we are contending for a world where Christ reigns in every heart and His light shines from every life.
                         </p>
                     </div>
                 </section>

@@ -7,6 +7,7 @@ import Footer from "@/components/shared/Footer";
 import Link from "next/link";
 import { motion } from 'framer-motion';
 import type { Variants } from 'framer-motion';
+import { Button } from "@/components/ui/button";
 
 const sundayImages = ["/sunday-1.jpeg", "/sunday-2.jpeg", "/sunday-3.jpeg"];
 const wednesdayImages = ["/wednesday-1.jpeg", "/wednesday-2.jpeg", "/wednesday-3.jpeg"];
@@ -30,6 +31,7 @@ const ServicesClient = () => {
         <>
             <div className="w-full min-w-screen overflow-x-hidden scroll-smooth px-8 lg:px-20">
                 <div id="sunday-services"  className="py-28">
+
                     {/* Header Section */}
                     <section className="flex flex-col gap-14 mb-24">
                         <div className="flex md:flex-row flex-col gap-10 md:items-end items-start justify-between w-full">
@@ -48,19 +50,27 @@ const ServicesClient = () => {
                                     initial="hidden"
                                     animate="visible"
                                     variants={fadeInUp}
-                                    className="sm:text-lg text-sm lg:w-xl w-[20rem] max-w-full"
+                                    className="sm:text-lg text-sm lg:w-xl max-w-full"
                                 >
                                     You can be a part of us and be present in any of our services at Omega Vision Christian Network
                                 </motion.p>
                             </div>
 
-                            <Link 
-                                href="/"
-                                className="bg-blue-500 hover:bg-blue-500 flex items-center justify-center gap-5 text-white rounded-md cursor-pointer px-6 py-4 active:scale-90 transition-all duration-500 ease-in-out"
+                            <motion.div
+                                custom={2}
+                                initial="hidden"
+                                animate="visible"
+                                variants={fadeInUp}
                             >
-                                <p>Join us online</p>
-                                <Play />
-                            </Link>
+                                <Link 
+                                    href="/online"
+                                >
+                                    <Button className="bg-blue-500 hover:bg-blue-500 cursor-pointer text-white">
+                                        <span>Join us online</span>
+                                        <Play className="p-0.5"/>
+                                    </Button>
+                                </Link>
+                            </motion.div>
                         </div>
                     </section>
 
