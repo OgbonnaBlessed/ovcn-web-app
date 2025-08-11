@@ -1,15 +1,12 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion } from "framer-motion";
 import { Variants } from 'framer-motion';
-import { Play, Radio, Youtube } from 'lucide-react';
+import { Play } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Skeleton } from "@/components/ui/skeleton";
 import Footer from '@/components/shared/Footer';
-import { Button } from '@/components/ui/button';
 
 const OnlineClient = () => {
     const [isLive, setIsLive] = useState({

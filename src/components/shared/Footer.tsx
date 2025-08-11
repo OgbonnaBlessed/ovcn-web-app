@@ -17,6 +17,7 @@ const Footer = () => {
                 { name: "Home", href: "/" },
                 { name: "About Us", href: "/about-us" },
                 { name: "Give", href: "/give" },
+                { name: "Contact Us", href: "/contact-us" },
                 { name: "Download Mobile App", href: "/" },
             ]
         },
