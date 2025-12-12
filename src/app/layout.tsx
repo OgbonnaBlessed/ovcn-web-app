@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google"
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import AppSidebar from "@/components/shared/AppSidebar";
@@ -11,11 +11,25 @@ const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter",
-})
+});
 
 export const metadata: Metadata = {
   title: "Omega Vision Christian Network",
   description: "The Adullam of Destiny",
+  openGraph: {
+    title: "Omega Vision Christian Network",
+    description: "The Adullam of Destiny",
+    url: "https://ovcn-web-app.vercel.app/",
+    siteName: "OVCN",
+    images: [
+      {
+        url: "/about-us.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -35,9 +49,7 @@ export default function RootLayout({
           >
             <AppSidebar />
             <Navbar />
-            <main className="min-h-screen">
-              {children}
-            </main>
+            <main className="min-h-screen">{children}</main>
             <Toaster />
           </ThemeProvider>
         </SidebarProvider>

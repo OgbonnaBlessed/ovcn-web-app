@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { Button } from '@/components/ui/button';
-import React from 'react';
-import { motion } from 'framer-motion';
-import type { Variants } from 'framer-motion';
-import Link from 'next/link';
+import { Button } from "@/components/ui/button";
+import React from "react";
+import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
+import Link from "next/link";
 
 const HomePage = () => {
   // Moved inside to avoid server-client function passing issue
@@ -25,11 +25,14 @@ const HomePage = () => {
     <div className="relative h-screen min-w-screen overflow-hidden text-white">
       {/* Background Video */}
       <video
+        key="/home_video.mp4"
         className="absolute top-0 left-0 w-full h-full object-cover"
         src="/home_video.mp4" // Ensure this is in your /public folder
         autoPlay
         loop
         playsInline
+        muted
+        preload="auto"
       />
 
       {/* Overlay Content */}
@@ -41,7 +44,7 @@ const HomePage = () => {
           variants={fadeInUp}
           className="lg:w-2xl text-5xl md:text-7xl font-bold text-center leading-tight"
         >
-          EXPERIENCE GOD‘S PRESENCE
+          EXPERIENCE GOD&apos;S PRESENCE
         </motion.h1>
         <motion.p
           custom={1}
@@ -50,7 +53,8 @@ const HomePage = () => {
           variants={fadeInUp}
           className="sm:w-xl text-center mt-4"
         >
-          Join services either online & onsite every Sunday by 12:00pm, Wednesdays by 5:00pm and 3rd Fridays by 6:00pm.
+          Join services either online & onsite every Sunday by 12:00pm,
+          Wednesdays by 5:00pm and 3rd Fridays by 6:00pm.
         </motion.p>
         <motion.div
           custom={2}
@@ -59,16 +63,12 @@ const HomePage = () => {
           variants={fadeInUp}
           className="flex items-center gap-5 mt-5"
         >
-          <Link
-            href="/online"
-          >
+          <Link href="/online">
             <Button className="cursor-pointer bg-white hover:bg-white text-black">
               Join us online
             </Button>
           </Link>
-          <Link
-            href="/about-us"
-          >
+          <Link href="/about-us">
             <Button className="cursor-pointer bg-transparent hover:bg-transparent border-1 border-white text-white">
               Learn more
             </Button>
@@ -78,7 +78,7 @@ const HomePage = () => {
 
       {/* Footer */}
       <footer className="absolute bottom-0 w-full text-center lg:px-20 px-8 py-4 text-sm">
-        <motion.div 
+        <motion.div
           custom={3}
           initial="hidden"
           animate="visible"
@@ -86,7 +86,10 @@ const HomePage = () => {
           className="w-full flex lg:flex-row flex-col gap-5 justify-between items-center"
         >
           <p>Omega Vision Christian Network</p>
-          <p>&copy; {new Date().getFullYear()} Omega Vision Christian Network. All Rights Reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Omega Vision Christian Network.
+            All Rights Reserved.
+          </p>
         </motion.div>
       </footer>
     </div>
