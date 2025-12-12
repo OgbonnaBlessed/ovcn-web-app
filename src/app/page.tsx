@@ -1,26 +1,11 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import React from "react";
+import { fadeInUp } from "@/helper/motion";
 import { motion } from "framer-motion";
-import type { Variants } from "framer-motion";
 import Link from "next/link";
 
 const HomePage = () => {
-  // Moved inside to avoid server-client function passing issue
-  const fadeInUp: Variants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: (i: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: i * 0.08,
-        duration: 1,
-        ease: [0.42, 0, 0.58, 1], // easeOut
-      },
-    }),
-  };
-
   return (
     <div className="relative h-screen min-w-screen overflow-hidden text-white">
       {/* Background Video */}

@@ -1,14 +1,14 @@
-import { Metadata } from 'next'
-import React from 'react'
-import OnlineClient from './OnlineClient'
+import { Metadata } from "next";
+import React from "react";
+import OnlineClient from "./OnlineClient";
 
 export const metadata: Metadata = {
-    title: 'OVCN Online | OVCN',
-    description: 'Join us online'
-}
+  title: "OVCN Online | OVCN",
+  description: "Join us online",
+};
 
 const page = () => {
-    return <OnlineClient />
-}
+  return <OnlineClient />;
+};
 
-export default page
+export default page;
