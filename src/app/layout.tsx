@@ -16,11 +16,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Omega Vision Christian Network",
     description: "The Adullam of Destiny",
-    url: "https://ovcn-web-app.vercel.app/",
+    url: "https://omegavisionchristiannetwork.com/",
     siteName: "OVCN",
     images: [
       {
-        url: "https://ovcn-web-app.vercel.app/about-us.jpg",
+        url: "https://omegavisionchristiannetwork.com/about-us.jpg",
         width: 1200,
         height: 630,
       },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Us | OVCN",
     description: "Get to know who we are",
-    images: ["https://ovcn-web-app.vercel.app/about-us.jpg"],
+    images: ["https://omegavisionchristiannetwork.com/about-us.jpg"],
   },
 };
 

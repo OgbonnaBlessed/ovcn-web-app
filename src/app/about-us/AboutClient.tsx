@@ -4,13 +4,14 @@ import Footer from "@/components/shared/Footer";
 import { campuses } from "@/data/campuses";
 import { fadeInUp } from "@/helper/motion";
 import { motion } from "framer-motion";
+import { Instagram } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import {
-    FaFacebook,
-    FaHandPointRight,
-    FaInstagram,
-    FaTwitter,
+  FaFacebookF,
+  FaHandPointRight,
+  FaXTwitter,
+  FaYoutube,
 } from "react-icons/fa6";
 
 const AboutClient = () => {
@@ -21,15 +22,13 @@ const AboutClient = () => {
           id="who-we-are"
           className="relative min-h-screen min-w-screen overflow-hidden"
         >
-          <div className="absolute inset-0">
-            <Image
-              src="/about-us.jpg"
-              fill
-              alt="About us"
-              priority
-              className="object-cover object-center"
-            />
-          </div>
+          <Image
+            src="/about-us.jpg"
+            fill
+            alt="About us"
+            priority
+            className="object-cover object-center"
+          />
           <div className="absolute flex flex-col gap-5 lg:px-20 px-8 top-1/2 transform -translate-y-1/4 text-white w-full">
             <motion.div
               custom={0}
@@ -38,18 +37,12 @@ const AboutClient = () => {
               variants={fadeInUp}
               className="flex items-center sm:gap-10 gap-5 flex-wrap"
             >
-              <div className="flex items-center gap-2">
-                <Image src="/star.png" width={20} height={20} alt="star" />
-                <p>Worship</p>
-              </div>
-              <div className="flex items-center gap-3">
-                <Image src="/star.png" width={20} height={20} alt="star" />
-                <p>Word</p>
-              </div>
-              <div className="flex items-center gap-3">
-                <Image src="/star.png" width={20} height={20} alt="star" />
-                <p>Encounter</p>
-              </div>
+              {["Worship", "Word", "Encounter"].map((a) => (
+                <div key={a} className="flex items-center gap-3">
+                  <Image src="/star.png" width={20} height={20} alt="star" />
+                  <p>{a}</p>
+                </div>
+              ))}
             </motion.div>
             <motion.div
               custom={1}
@@ -73,32 +66,45 @@ const AboutClient = () => {
           </div>
         </section>
 
-        <section id="our-history" className="relative py-24 px-8 lg:px-20">
-          <h2 className="lg:text-7xl text-5xl font-bold mb-10">Our History</h2>
-          <div className="w-full text-lg leading-relaxed">
-            <div className="w-full min-h-96 relative">
-              <Image
-                src="/history.png"
-                fill
-                alt="Early days"
-                className="object-cover object-center"
-              />
+        <section
+          id="our-history"
+          className="relative flex flex-col gap-5 md:gap-10 py-14 px-6 lg:px-20"
+        >
+          <h2 className="lg:text-5xl text-3xl font-bold">Our History</h2>
+          <div className="w-full flex flex-col gap-5 md:gap-10 text-lg leading-relaxed">
+            <div className="flex items-center gap-10">
+              <div className="hidden md:block flex-1 min-h-80 md:min-h-96 relative">
+                <Image
+                  src="/history-1.jpg"
+                  fill
+                  alt="Early days"
+                  className="object-cover object-center"
+                />
+              </div>
+              <div className="flex-1 min-h-96 relative">
+                <Image
+                  src="/history-2.jpg"
+                  fill
+                  alt="Early days"
+                  className="object-cover object-center"
+                />
+              </div>
             </div>
-            <div className="flex flex-col md:flex-row align-top justify-between gap-8">
-              <p className="mt-8">
+            <div className="flex flex-col md:flex-row align-top justify-between gap-5 md:gap-10 text-sm md:text-base">
+              <p>
                 In 2010, driven by a deep desire to encounter the realities of
                 the Spirit, Apostle Clement Gabriel embarked on a journey that
                 would forever transform lives. The foundation of our ministry
                 was laid in fervent prayer, as Apostle
               </p>
 
-              <p className="md:mt-8">
+              <p>
                 Clement, inspired by Jeremiah 33:3, called upon God for guidance
                 and power: &quot;Call to me and I will answer you and tell you
                 great and unsearchable things you do not
               </p>
 
-              <p className="md:mt-8">
+              <p>
                 Clement, inspired by Jeremiah 33:3, called upon God for guidance
                 and power: &quot;Call to me and I will answer you and tell you
                 great and unsearchable things you do not
@@ -107,13 +113,14 @@ const AboutClient = () => {
           </div>
         </section>
 
-        <section id="our-mission" className="relative py-24 px-8 lg:px-20">
-          <h2 className="lg:text-7xl text-5xl font-bold mb-10">
-            Vision & Mission
-          </h2>
-          <div className="w-full text-lg leading-relaxed">
-            <div className="w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 justify-items-center items-center gap-10">
-              <div className="w-full max-w-xs sm:w-[400px] h-64 sm:h-72 relative overflow-hidden">
+        <section
+          id="our-vision"
+          className="relative flex flex-col gap-5 md:gap-10 py-14 px-6 lg:px-20"
+        >
+          <h2 className="lg:text-5xl text-3xl font-bold">Vision</h2>
+          <div className="w-full flex flex-col gap-5 md:gap-10 text-lg leading-relaxed">
+            <div className="w-full flex items-center gap-10">
+              <div className="relative hidden md:block flex-1 min-h-96">
                 <Image
                   src="/mission-1.png"
                   fill
@@ -122,7 +129,7 @@ const AboutClient = () => {
                 />
               </div>
 
-              <div className="w-full max-w-xs sm:w-[400px] h-64 sm:h-72 relative overflow-hidden">
+              <div className="relative flex-1 min-h-96">
                 <Image
                   src="/mission-2.png"
                   fill
@@ -131,7 +138,7 @@ const AboutClient = () => {
                 />
               </div>
 
-              <div className="w-full max-w-xs sm:w-[400px] h-64 sm:h-72 relative overflow-hidden">
+              <div className="relative hidden md:block flex-1 min-h-96">
                 <Image
                   src="/about-us.jpg"
                   fill
@@ -141,8 +148,62 @@ const AboutClient = () => {
               </div>
             </div>
 
-            <div className="flex flex-col md:flex-row align-top justify-between gap-8 mt-8">
+            <div className="flex flex-col md:flex-row align-top justify-between gap-5 md:gap-10 text-sm md:text-base">
+              <p className="text-start">
+                Our vision is to be a beacon of God&apos;s light, transforming
+                lives through the power of the Holy Spirit and the unchanging
+                Word of God. We aspire to create an environment where
+                individuals can encounter God intimately, experience His love
+                profoundly, and be equipped to live victoriously in Christ.
+              </p>
               <p>
+                Our mission is to glorify God by making disciples of all
+                nations, rooted in the teachings of Jesus Christ and guided by
+                the Holy Spirit. We are committed to: Proclaiming the Gospel,
+                Fostering Spiritual Growth, Building a Community of Believers,
+                Empowering for Service, Impacting the Community.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="our-mission"
+          className="relative flex flex-col gap-5 md:gap-10 py-14 px-6 lg:px-20"
+        >
+          <h2 className="lg:text-5xl text-3xl font-bold">Mission</h2>
+          <div className="w-full flex flex-col gap-5 md:gap-10 text-lg leading-relaxed">
+            <div className="w-full flex items-center gap-10">
+              <div className="relative hidden md:block flex-1 min-h-96">
+                <Image
+                  src="/mission-1.png"
+                  fill
+                  alt="Teaching the Word"
+                  className="object-cover object-center"
+                />
+              </div>
+
+              <div className="relative flex-1 min-h-96">
+                <Image
+                  src="/mission-2.png"
+                  fill
+                  alt="Discipleship and growth"
+                  className="object-cover object-center"
+                />
+              </div>
+
+              <div className="relative hidden md:block flex-1 min-h-96">
+                <Image
+                  src="/about-us.jpg"
+                  fill
+                  alt="Discipleship and growth"
+                  className="object-cover object-center"
+                />
+              </div>
+            </div>
+
+            <div className="flex flex-col md:flex-row align-top justify-between gap-5 md:gap-10 text-sm md:text-base">
+              <p className="text-start">
                 Our vision is to be a beacon of God&apos;s light, transforming
                 lives through the power of the Holy Spirit and the unchanging
                 Word of God. We aspire to create an environment where
@@ -162,25 +223,25 @@ const AboutClient = () => {
 
         <section
           id="leadership"
-          className="relative flex flex-col gap-10 lg:gap-20 py-24 lg:px-20 px-8 w-full"
+          className="relative w-full flex flex-col gap-5 lg:gap-10 py-14 lg:px-20 px-6"
         >
-          <h1 className="lg:text-7xl text-5xl font-bold w-full">Leadership</h1>
-          <div className="w-full flex flex-col xl:flex-row items-start gap-20">
-            <div className="w-full relative h-[400px] rounded-3xl overflow-hidden">
+          <h1 className="lg:text-5xl text-3xl font-bold">Leadership</h1>
+          <div className="w-full flex flex-col items-center gap-10 md:gap-20">
+            <div className="relative h-80 lg:h-[30rem] aspect-square">
               <Image
-                src="/sermon-icon.jpg"
+                src="/apostle.jpeg"
                 alt="Apostle Gabriel Clement"
                 fill
-                className="object-center object-cover"
+                className="object-cover object-top"
               />
             </div>
 
-            <div className="flex flex-col gap-8">
-              <h1 className="lg:text-5xl text-3xl font-bold">
+            <div className="flex flex-col items-center text-center gap-2 md:gap-5">
+              <h1 className="lg:text-4xl text-xl font-bold">
                 Apostle Gabriel Clement
               </h1>
 
-              <div className="flex flex-col gap-5 text-lg">
+              <div className="max-w-2xl w-full flex flex-col items-center gap-5 text-sm md:text-base">
                 <p>
                   Our mission is to glorify God by making disciples of all
                   nations, rooted in the teachings of Jesus Christ and guided by
@@ -201,22 +262,47 @@ const AboutClient = () => {
                     href="https://www.facebook.com/share/17Fv9oBnBW/?mibextid=wwXIfr"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="group"
                   >
-                    <FaFacebook />
+                    <div className="bg-white text-blue-500 p-3 rounded-full shadow shadow-gray-300">
+                      <FaFacebookF
+                        size={16}
+                        className="group-hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
                   </Link>
                   <Link
                     href="https://www.instagram.com/officialgabrielclement?igsh=cTVoemM2ZzNoOTFx"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="group"
                   >
-                    <FaInstagram />
+                    <div className="p-2.5 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 inline-flex">
+                      <Instagram className="text-white w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
+                    </div>
                   </Link>
                   <Link
                     href="https://x.com/omegavision_?s=21"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="group"
                   >
-                    <FaTwitter />
+                    <div className="bg-white p-3 rounded-full shadow shadow-gray-300">
+                      <FaXTwitter
+                        size={16}
+                        className="group-hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>{" "}
+                  </Link>
+                  <Link
+                    href="https://www.youtube.com/@Apostlegabrielclement"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group"
+                  >
+                    <div className="bg-red-600 p-2.5 rounded-full flex items-center justify-center">
+                      <FaYoutube className="text-white w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
+                    </div>
                   </Link>
                 </div>
               </div>
@@ -226,13 +312,13 @@ const AboutClient = () => {
 
         <section
           id="our-locations"
-          className="relative flex flex-col lg:flex-row gap-10 lg:gap-20 py-24 px-8 lg:px-20 w-full"
+          className="relative w-full flex flex-col lg:flex-row lg:justify-between lg:gap-0 gap-10 py-14 px-6 lg:px-20"
         >
-          <div className="flex flex-col md:gap-6 gap-2 w-full lg:w-1/2">
-            <h2 className="lg:text-7xl text-4xl font-bold w-full">
+          <div className="w-full max-w-md flex flex-col md:gap-6 gap-1">
+            <h2 className="lg:text-5xl text-3xl font-bold w-full">
               Our Locations
             </h2>
-            <p className="text-base sm:text-lg">
+            <p className="text-sm md:text-base">
               A place prepared for you. You are always welcome at Omega Vision
               Christian Network.
             </p>
@@ -242,8 +328,10 @@ const AboutClient = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
               {campuses.map((campus, i) => (
                 <div key={i} className="flex flex-col md:gap-2 gap-1">
-                  <p className="font-medium text-lg">{campus.region}</p>
-                  <p className="text-accent-foreground font-light">
+                  <p className="font-medium text-base md:text-lg">
+                    {campus.region}
+                  </p>
+                  <p className="text-sm md:text-base text-accent-foreground font-light">
                     {campus.address}
                   </p>
                   <a

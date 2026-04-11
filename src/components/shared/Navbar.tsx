@@ -55,14 +55,24 @@ const Navbar = () => {
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8 text-sm">
-          <Link href="/">Home</Link>
-          <Link href="/about-us">About us</Link>
-          <Link href="/partnership" className="text-sm">
+          <Link href="/" prefetch>
+            Home
+          </Link>
+          <Link href="/about-us" prefetch>
+            About us
+          </Link>
+          <Link href="/partnership" prefetch>
             Partnership
           </Link>
-          <Link href="/services">Services</Link>
-          <Link href="/sermons">Sermons</Link>
-          <Link href="/map">Map</Link>
+          <Link href="/services" prefetch>
+            Services
+          </Link>
+          <Link href="/sermons" prefetch>
+            Sermons
+          </Link>
+          <Link href="/map" prefetch>
+            Map
+          </Link>
         </div>
 
         <div className="block md:hidden">
@@ -112,22 +122,38 @@ const Navbar = () => {
 
                   {/* LINKS */}
                   <div className="flex flex-col items-center gap-10">
-                    <Link href="/" onClick={() => setOpen(false)}>
+                    <Link href="/" prefetch onClick={() => setOpen(false)}>
                       Home
                     </Link>
-                    <Link href="/about-us" onClick={() => setOpen(false)}>
+                    <Link
+                      href="/about-us"
+                      prefetch
+                      onClick={() => setOpen(false)}
+                    >
                       About us
                     </Link>
-                    <Link href="/partnership" onClick={() => setOpen(false)}>
+                    <Link
+                      href="/partnership"
+                      prefetch
+                      onClick={() => setOpen(false)}
+                    >
                       Partnership
                     </Link>
-                    <Link href="/services" onClick={() => setOpen(false)}>
+                    <Link
+                      href="/services"
+                      prefetch
+                      onClick={() => setOpen(false)}
+                    >
                       Services
                     </Link>
-                    <Link href="/sermons" onClick={() => setOpen(false)}>
+                    <Link
+                      href="/sermons"
+                      prefetch
+                      onClick={() => setOpen(false)}
+                    >
                       Sermons
                     </Link>
-                    <Link href="/map" onClick={() => setOpen(false)}>
+                    <Link href="/map" prefetch onClick={() => setOpen(false)}>
                       Map
                     </Link>
                   </div>
