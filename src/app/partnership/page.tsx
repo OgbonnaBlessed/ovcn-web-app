@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import React from "react";
-import GiveClient from "./GiveClient";
+import GiveClient from "./PartnershipClient";
 
 export const metadata: Metadata = {
   title: "OVCN Give | OVCN",
