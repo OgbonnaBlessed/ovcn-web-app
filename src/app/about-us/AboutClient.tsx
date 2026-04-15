@@ -1,10 +1,11 @@
 "use client";
 
+import CarouselDemo from "@/components/shared/Carousel";
 import Footer from "@/components/shared/Footer";
 import { campuses } from "@/data/campuses";
 import { fadeInUp } from "@/helper/motion";
 import { motion } from "framer-motion";
-import { Instagram } from "lucide-react";
+import { Clock, Instagram, Play } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -14,13 +15,34 @@ import {
   FaYoutube,
 } from "react-icons/fa6";
 
+const services = [
+  {
+    image: "/service-1.jpg",
+    name: "Moment of Encounter",
+    day: "Sunday Service",
+    date: "12:00PM",
+  },
+  {
+    image: "/service-2.jpg",
+    name: "Service of Sound",
+    day: "Wednesday Service",
+    date: "5:00PM",
+  },
+  {
+    image: "/service-3.jpg",
+    name: "Monthly Mega Meeting",
+    day: "Third Fridays of the month",
+    date: "6:00PM",
+  },
+];
+
 const AboutClient = () => {
   return (
     <>
       <main className="w-full max-w-screen overflow-x-hidden scroll-smooth">
         <section
           id="who-we-are"
-          className="relative min-h-screen min-w-screen overflow-hidden"
+          className="relative h-screen w-screen overflow-hidden"
         >
           <Image
             src="/about-us.jpg"
@@ -73,7 +95,7 @@ const AboutClient = () => {
           <h2 className="lg:text-5xl text-3xl font-bold">Our History</h2>
           <div className="w-full flex flex-col gap-5 md:gap-10 text-lg leading-relaxed">
             <div className="flex items-center gap-10">
-              <div className="hidden md:block flex-1 min-h-80 md:min-h-96 relative">
+              <div className="hidden md:block flex-1 md:h-96 relative">
                 <Image
                   src="/history-1.jpg"
                   fill
@@ -81,7 +103,7 @@ const AboutClient = () => {
                   className="object-cover object-center"
                 />
               </div>
-              <div className="flex-1 min-h-96 relative">
+              <div className="flex-1 h-52 md:h-96 relative">
                 <Image
                   src="/history-2.jpg"
                   fill
@@ -120,7 +142,7 @@ const AboutClient = () => {
           <h2 className="lg:text-5xl text-3xl font-bold">Vision</h2>
           <div className="w-full flex flex-col gap-5 md:gap-10 text-lg leading-relaxed">
             <div className="w-full flex items-center gap-10">
-              <div className="relative hidden md:block flex-1 min-h-96">
+              <div className="relative hidden md:block flex-1 h-96">
                 <Image
                   src="/mission-1.png"
                   fill
@@ -129,7 +151,7 @@ const AboutClient = () => {
                 />
               </div>
 
-              <div className="relative flex-1 min-h-96">
+              <div className="relative flex-1 h-52 md:h-96">
                 <Image
                   src="/mission-2.png"
                   fill
@@ -138,7 +160,7 @@ const AboutClient = () => {
                 />
               </div>
 
-              <div className="relative hidden md:block flex-1 min-h-96">
+              <div className="relative hidden md:block flex-1 h-96">
                 <Image
                   src="/about-us.jpg"
                   fill
@@ -174,7 +196,7 @@ const AboutClient = () => {
           <h2 className="lg:text-5xl text-3xl font-bold">Mission</h2>
           <div className="w-full flex flex-col gap-5 md:gap-10 text-lg leading-relaxed">
             <div className="w-full flex items-center gap-10">
-              <div className="relative hidden md:block flex-1 min-h-96">
+              <div className="relative hidden md:block flex-1 h-96">
                 <Image
                   src="/mission-1.png"
                   fill
@@ -183,7 +205,7 @@ const AboutClient = () => {
                 />
               </div>
 
-              <div className="relative flex-1 min-h-96">
+              <div className="relative flex-1 h-52 md:h-96">
                 <Image
                   src="/mission-2.png"
                   fill
@@ -192,7 +214,7 @@ const AboutClient = () => {
                 />
               </div>
 
-              <div className="relative hidden md:block flex-1 min-h-96">
+              <div className="relative hidden md:block flex-1 h-96">
                 <Image
                   src="/about-us.jpg"
                   fill
@@ -308,6 +330,82 @@ const AboutClient = () => {
               </div>
             </div>
           </div>
+        </section>
+
+        <section
+          id="our-services"
+          className="relative flex flex-col gap-10 md:gap-10 py-14 px-6 lg:px-20"
+        >
+          <div className="flex items-start md:items-center flex-col md:flex-row gap-5 md:gap-0 justify-between">
+            <div className="w-full max-w-lg flex flex-col md:gap-2 gap-1">
+              <h2 className="lg:text-5xl text-3xl font-bold w-full">
+                Our Services
+              </h2>
+              <p className="text-sm md:text-base">
+                You can be a part of us and be present in any of our services at
+                Omega Vision Christian Network.
+              </p>
+            </div>
+
+            <Link href="/online">
+              <div className="flex items-center gap-2 text-xs md:text-sm p-3 bg-[#0A42D0] text-white rounded-md">
+                <p>Join us online</p>
+                <Play size={14} />
+              </div>
+            </Link>
+          </div>
+          <div className="w-full flex flex-col gap-5 md:flex-row items-center justify-between">
+            {services.map((service, i) => (
+              <div
+                key={i}
+                className="relative w-full aspect-square rounded-2xl overflow-hidden"
+              >
+                <Image
+                  src={service.image}
+                  fill
+                  alt={service.name}
+                  className="object-cover object-center"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+
+                <div className="absolute left-5 bottom-5 flex flex-col text-white z-10">
+                  <h3 className="font-medium">{service.name}</h3>
+                  <div className="flex items-baseline-last gap-2 text-sm font-light">
+                    <p>{service.day}</p>
+                    <div className="flex items-center gap-1 text-xs text-[#0A42D0]">
+                      <Clock size={12} />
+                      <p>{service.date}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section
+          id="hear-from-our-members"
+          className="relative w-full flex flex-col gap-10 md:gap-10 py-14 px-6 lg:px-20"
+        >
+          <div className="flex items-start md:items-center flex-col md:flex-row gap-5 md:gap-0 justify-between">
+            <div className="w-full max-w-xl flex flex-col md:gap-2 gap-1">
+              <h2 className="lg:text-5xl text-3xl font-bold w-full">
+                Hear from our members{" "}
+              </h2>
+              <p className="text-sm md:text-base">
+                Our members have shared their experience over time.
+              </p>
+            </div>
+
+            <Link href="/online">
+              <div className="flex items-center gap-2 text-xs md:text-sm p-3 bg-[#0A42D0] text-white rounded-md">
+                <p>Join us online</p>
+                <Play size={14} />
+              </div>
+            </Link>
+          </div>
+          <CarouselDemo />
         </section>
 
         <section
