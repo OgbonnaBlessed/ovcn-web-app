@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import React from "react";
 import GiveClient from "./PartnershipClient";
 
 export const metadata: Metadata = {

@@ -68,7 +68,7 @@ const CarouselDemo = () => {
         <CarouselContent>
           {testimonies.map((t, index) => (
             <CarouselItem key={index} className="basis-full lg:basis-1/2">
-              <Card className="w-full max-w-full flex flex-col items-start p-8 md:p-8! border-0 bg-[#0A42D0]/10">
+              <Card className="w-full max-w-full flex flex-col items-start p-8 md:p-8! border-0 bg-blue-100">
                 <div className="relative w-16 aspect-square rounded-full overflow-hidden">
                   <img
                     src={t.image}
@@ -87,8 +87,8 @@ const CarouselDemo = () => {
           ))}
         </CarouselContent>
         <div className="flex items-center justify-center gap-5 mt-10">
-          <CarouselPrevious className="border-none bg-[#0A42D0]/80 hover:bg-[#0A42D0]/40 hover:text-white text-white size-10 transition-all duration-300 ease-in-out" />
-          <CarouselNext className="border-none bg-[#0A42D0]/80 hover:bg-[#0A42D0]/40 hover:text-white text-white size-10 transition-all duration-300 ease-in-out" />
+          <CarouselPrevious className="border-none bg-[#0A42D0] hover:bg-[#0A42D0]/50 hover:text-white text-white size-10 transition-all duration-300 ease-in-out" />
+          <CarouselNext className="border-none bg-[#0A42D0] hover:bg-[#0A42D0]/50 hover:text-white text-white size-10 transition-all duration-300 ease-in-out" />
         </div>
       </Carousel>
 

@@ -48,6 +48,7 @@ const AboutClient = () => {
             src="/about-us.jpg"
             fill
             alt="About us"
+            quality={100}
             preload
             className="object-cover object-top"
           />
@@ -98,7 +99,7 @@ const AboutClient = () => {
           id="our-history"
           className="relative w-full min-h-screen flex items-center justify-center"
         >
-          <div className="flex flex-col gap-5 md:gap-10 py-14 px-6 lg:px-20">
+          <div className="flex flex-col gap-5 md:gap-10 py-20 px-6 lg:px-20">
             <h2 className="lg:text-5xl text-3xl font-bold">Our History</h2>
             <div className="w-full flex flex-col gap-5 md:gap-10 text-lg leading-relaxed">
               <div className="flex items-center gap-10">
@@ -147,7 +148,7 @@ const AboutClient = () => {
           id="our-vision"
           className="relative w-full min-h-screen flex items-center justify-center"
         >
-          <div className="flex flex-col gap-5 md:gap-10 py-14 px-6 lg:px-20">
+          <div className="flex flex-col gap-5 md:gap-10 py-20 px-6 lg:px-20">
             <h2 className="lg:text-5xl text-3xl font-bold">Vision</h2>
             <div className="w-full flex flex-col gap-5 md:gap-10 text-lg leading-relaxed">
               <div className="w-full flex items-center gap-10">
@@ -203,7 +204,7 @@ const AboutClient = () => {
           id="our-mission"
           className="relative w-full min-h-screen flex items-center justify-center"
         >
-          <div className="flex flex-col gap-5 md:gap-10 py-14 px-6 lg:px-20">
+          <div className="flex flex-col gap-5 md:gap-10 py-20 px-6 lg:px-20">
             <h1 className="lg:text-5xl text-3xl font-bold">Mission</h1>
             <div className="w-full flex flex-col gap-5 md:gap-10 text-lg leading-relaxed">
               <div className="w-full flex items-center gap-10">
@@ -256,10 +257,90 @@ const AboutClient = () => {
         </section>
 
         <section
+          id="our-services"
+          className="relative w-full min-h-screen flex items-center justify-center"
+        >
+          <div className="w-full flex flex-col gap-10 py-20 px-6 lg:px-20">
+            <div className="flex items-start md:items-center flex-col md:flex-row gap-5 md:gap-0 justify-between">
+              <div className="w-full max-w-lg flex flex-col md:gap-2 gap-1">
+                <h2 className="lg:text-5xl text-3xl font-bold w-full">
+                  Our Services
+                </h2>
+                <p className="text-sm md:text-base">
+                  You can be a part of us and be present in any of our services
+                  at Omega Vision Christian Network.
+                </p>
+              </div>
+
+              <Link href="/online">
+                <div className="flex items-center gap-2 text-xs md:text-sm p-3 bg-[#0A42D0] text-white rounded-md">
+                  <p>Join us online</p>
+                  <Play size={14} />
+                </div>
+              </Link>
+            </div>
+            <div className="w-full flex flex-col gap-5 md:flex-row items-center justify-between">
+              {services.map((service, i) => (
+                <div
+                  key={i}
+                  className="relative w-full aspect-square rounded-2xl overflow-hidden"
+                >
+                  <Image
+                    src={service.image}
+                    fill
+                    alt={service.name}
+                    className="object-cover object-center"
+                  />
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+
+                  <div className="absolute left-5 bottom-5 flex flex-col text-white z-10">
+                    <h3 className="font-medium">{service.name}</h3>
+                    <div className="flex items-baseline-last gap-2 text-sm font-light">
+                      <p>{service.day}</p>
+                      <div className="flex items-center gap-1 text-xs text-[#0A42D0]">
+                        <Clock size={12} />
+                        <p>{service.date}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="hear-from-our-members"
+          className="relative w-full min-h-screen flex items-center justify-center"
+        >
+          <div className="w-full flex flex-col gap-10 py-20 px-6 lg:px-20">
+            <div className="w-full flex items-start md:items-center flex-col md:flex-row gap-5 md:gap-0 justify-between">
+              <div className="w-full max-w-xl flex flex-col md:gap-2 gap-1">
+                <h2 className="lg:text-5xl text-3xl font-bold w-full">
+                  Hear from our members{" "}
+                </h2>
+                <p className="text-sm md:text-base">
+                  Our members have shared their experience over time.
+                </p>
+              </div>
+
+              <Link href="/online">
+                <div className="flex items-center gap-2 text-xs md:text-sm p-3 bg-[#0A42D0] text-white rounded-md">
+                  <p>Join us online</p>
+                  <Play size={14} />
+                </div>
+              </Link>
+            </div>
+            <CarouselDemo />
+          </div>
+        </section>
+
+        <section
           id="leadership"
           className="relative w-full min-h-screen flex items-center justify-center"
         >
-          <div className="flex flex-col gap-5 md:gap-10 py-14 px-6 lg:px-20">
+          <div className="w-full flex flex-col gap-5 md:gap-10 py-20 px-6 lg:px-20">
             <h1 className="lg:text-5xl text-3xl font-bold">Leadership</h1>
             <div className="w-full flex flex-col items-center gap-10 md:gap-20">
               <div className="relative h-80 lg:h-[30rem] aspect-square">
@@ -347,91 +428,11 @@ const AboutClient = () => {
         </section>
 
         <section
-          id="our-services"
-          className="relative w-full min-h-screen flex items-center justify-center"
-        >
-          <div className="flex flex-col gap-5 md:gap-10 py-14 px-6 lg:px-20">
-            <div className="flex items-start md:items-center flex-col md:flex-row gap-5 md:gap-0 justify-between">
-              <div className="w-full max-w-lg flex flex-col md:gap-2 gap-1">
-                <h2 className="lg:text-5xl text-3xl font-bold w-full">
-                  Our Services
-                </h2>
-                <p className="text-sm md:text-base">
-                  You can be a part of us and be present in any of our services
-                  at Omega Vision Christian Network.
-                </p>
-              </div>
-
-              <Link href="/online">
-                <div className="flex items-center gap-2 text-xs md:text-sm p-3 bg-[#0A42D0] text-white rounded-md">
-                  <p>Join us online</p>
-                  <Play size={14} />
-                </div>
-              </Link>
-            </div>
-            <div className="w-full flex flex-col gap-5 md:flex-row items-center justify-between">
-              {services.map((service, i) => (
-                <div
-                  key={i}
-                  className="relative w-full aspect-square rounded-2xl overflow-hidden"
-                >
-                  <Image
-                    src={service.image}
-                    fill
-                    alt={service.name}
-                    className="object-cover object-center"
-                  />
-
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
-
-                  <div className="absolute left-5 bottom-5 flex flex-col text-white z-10">
-                    <h3 className="font-medium">{service.name}</h3>
-                    <div className="flex items-baseline-last gap-2 text-sm font-light">
-                      <p>{service.day}</p>
-                      <div className="flex items-center gap-1 text-xs text-[#0A42D0]">
-                        <Clock size={12} />
-                        <p>{service.date}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section
-          id="hear-from-our-members"
-          className="relative w-full min-h-screen flex items-center justify-center"
-        >
-          <div className="flex flex-col gap-5 md:gap-10 py-14 px-6 lg:px-20">
-            <div className="flex items-start md:items-center flex-col md:flex-row gap-5 md:gap-0 justify-between">
-              <div className="w-full max-w-xl flex flex-col md:gap-2 gap-1">
-                <h2 className="lg:text-5xl text-3xl font-bold w-full">
-                  Hear from our members{" "}
-                </h2>
-                <p className="text-sm md:text-base">
-                  Our members have shared their experience over time.
-                </p>
-              </div>
-
-              <Link href="/online">
-                <div className="flex items-center gap-2 text-xs md:text-sm p-3 bg-[#0A42D0] text-white rounded-md">
-                  <p>Join us online</p>
-                  <Play size={14} />
-                </div>
-              </Link>
-            </div>
-            <CarouselDemo />
-          </div>
-        </section>
-
-        <section
           id="our-locations"
           className="relative w-full min-h-screen flex items-center justify-center"
         >
-          <div className="flex flex-col gap-5 md:gap-10 py-14 px-6 lg:px-20">
-            <div className="w-full max-w-md flex flex-col md:gap-6 gap-1">
+          <div className="w-full flex flex-col md:flex-row gap-5 md:gap-10 py-20 px-6 lg:px-20 pb-20">
+            <div className="w-full max-w-md flex flex-col md:gap-2 gap-1">
               <h2 className="lg:text-5xl text-3xl font-bold w-full">
                 Our Locations
               </h2>
@@ -440,7 +441,7 @@ const AboutClient = () => {
                 Christian Network.
               </p>
             </div>
-            <div className="w-full lg:w-1/2 flex flex-col gap-12 sm:gap-16">
+            <div className="w-full flex flex-col gap-12 sm:gap-16">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
                 {campuses.map((campus, i) => (
                   <div key={i} className="flex flex-col md:gap-2 gap-1">
