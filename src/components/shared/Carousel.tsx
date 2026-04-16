@@ -69,7 +69,7 @@ const CarouselDemo = () => {
           {testimonies.map((t, index) => (
             <CarouselItem key={index} className="basis-full lg:basis-1/2">
               <Card className="w-full max-w-full flex flex-col items-start p-8 md:p-8! border-0 bg-[#0A42D0]/10">
-                <div className="relative w-16 md:w-16 aspect-square rounded-full overflow-hidden">
+                <div className="relative w-16 aspect-square rounded-full overflow-hidden">
                   <img
                     src={t.image}
                     alt={t.name}
