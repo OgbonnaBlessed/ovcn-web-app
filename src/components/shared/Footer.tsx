@@ -60,7 +60,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-16 bg-black text-white py-20 lg:px-20 px-8">
+    <div className="flex flex-col gap-20 bg-black text-white py-20 px-8 lg:px-20">
       <div className="w-full flex flex-col gap-10">
         <div className="w-full flex justify-between flex-wrap gap-10">
           <div className="flex flex-col gap-2">
@@ -80,7 +80,7 @@ const Footer = () => {
             <p className="text-sm md:text-base">14 Felicia Coker Street, Pipeline, Fagba, Lagos.</p>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-10">
+          <div className="flex flex-col md:flex-row gap-10 lg:gap-24">
             {sections.map((section, i) => (
               <div key={i} className="flex flex-col gap-2 md:gap-5">
                 <p className="font-medium text-base md:text-xl text-blue-500">
@@ -121,7 +121,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="text-sm text-center">
+      <div className="text-sm text-center lg:self-start">
         &copy; Copyright {new Date().getFullYear()} Omega Vision Christian
         Network. All Rights Reserved.
       </div>

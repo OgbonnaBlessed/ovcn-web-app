@@ -57,7 +57,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-8 text-sm">
           <Link href="/">Home</Link>
           <Link href="/about-us">About us</Link>
-          <Link href="/partnership">Partnership</Link>
+          <Link href="/give">Give</Link>
           <Link href="/sermons">Sermons</Link>
           <Link href="/map">Map</Link>
         </div>
@@ -115,8 +115,8 @@ const Navbar = () => {
                     <Link href="/about-us" onClick={() => setOpen(false)}>
                       About us
                     </Link>
-                    <Link href="/partnership" onClick={() => setOpen(false)}>
-                      Partnership
+                    <Link href="/give" onClick={() => setOpen(false)}>
+                      Give
                     </Link>
                     <Link href="/sermons" onClick={() => setOpen(false)}>
                       Sermons

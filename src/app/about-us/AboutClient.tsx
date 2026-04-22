@@ -99,7 +99,7 @@ const AboutClient = () => {
           id="our-history"
           className="relative w-full min-h-screen flex items-center justify-center"
         >
-          <div className="flex flex-col gap-5 md:gap-10 py-20 px-6 lg:px-20">
+          <div className="flex flex-col gap-5 md:gap-10 py-14 px-6 lg:p-20">
             <h2 className="lg:text-5xl text-3xl font-bold">Our History</h2>
             <div className="w-full flex flex-col gap-5 md:gap-10 text-lg leading-relaxed">
               <div className="flex items-center gap-10">
@@ -148,7 +148,7 @@ const AboutClient = () => {
           id="our-vision"
           className="relative w-full min-h-screen flex items-center justify-center"
         >
-          <div className="flex flex-col gap-5 md:gap-10 py-20 px-6 lg:px-20">
+          <div className="flex flex-col gap-5 md:gap-10 py-14 px-6 lg:p-20">
             <h2 className="lg:text-5xl text-3xl font-bold">Vision</h2>
             <div className="w-full flex flex-col gap-5 md:gap-10 text-lg leading-relaxed">
               <div className="w-full flex items-center gap-10">
@@ -204,7 +204,7 @@ const AboutClient = () => {
           id="our-mission"
           className="relative w-full min-h-screen flex items-center justify-center"
         >
-          <div className="flex flex-col gap-5 md:gap-10 py-20 px-6 lg:px-20">
+          <div className="flex flex-col gap-5 md:gap-10 py-14 px-6 lg:p-20">
             <h1 className="lg:text-5xl text-3xl font-bold">Mission</h1>
             <div className="w-full flex flex-col gap-5 md:gap-10 text-lg leading-relaxed">
               <div className="w-full flex items-center gap-10">
@@ -260,7 +260,7 @@ const AboutClient = () => {
           id="our-services"
           className="relative w-full min-h-screen flex items-center justify-center"
         >
-          <div className="w-full flex flex-col gap-10 py-20 px-6 lg:px-20">
+          <div className="w-full flex flex-col gap-10 py-14 px-6 lg:p-20">
             <div className="flex items-start md:items-center flex-col md:flex-row gap-5 md:gap-0 justify-between">
               <div className="w-full max-w-lg flex flex-col md:gap-2 gap-1">
                 <h2 className="lg:text-5xl text-3xl font-bold w-full">
@@ -314,7 +314,7 @@ const AboutClient = () => {
           id="hear-from-our-members"
           className="relative w-full min-h-screen flex items-center justify-center"
         >
-          <div className="w-full flex flex-col gap-10 py-20 px-6 lg:px-20">
+          <div className="w-full flex flex-col gap-10 py-14 px-6 lg:p-20">
             <div className="w-full flex items-start md:items-center flex-col md:flex-row gap-5 md:gap-0 justify-between">
               <div className="w-full max-w-xl flex flex-col md:gap-2 gap-1">
                 <h2 className="lg:text-5xl text-3xl font-bold w-full">
@@ -340,7 +340,7 @@ const AboutClient = () => {
           id="leadership"
           className="relative w-full min-h-screen flex items-center justify-center"
         >
-          <div className="w-full flex flex-col gap-5 md:gap-10 py-20 px-6 lg:px-20">
+          <div className="w-full flex flex-col gap-5 md:gap-10 py-14 px-6 lg:p-20">
             <h1 className="lg:text-5xl text-3xl font-bold">Leadership</h1>
             <div className="w-full flex flex-col items-center gap-10 md:gap-20">
               <div className="relative h-80 lg:h-[30rem] aspect-square">
@@ -429,9 +429,9 @@ const AboutClient = () => {
 
         <section
           id="our-locations"
-          className="relative w-full min-h-screen flex items-center justify-center"
+          className="relative w-full min-h-screen flex items-center justify-center pb-20"
         >
-          <div className="w-full flex flex-col md:flex-row gap-5 md:gap-10 py-20 px-6 lg:px-20 pb-20">
+          <div className="w-full flex flex-col md:flex-row gap-5 md:gap-10 py-14 px-6 lg:p-20">
             <div className="w-full max-w-md flex flex-col md:gap-2 gap-1">
               <h2 className="lg:text-5xl text-3xl font-bold w-full">
                 Our Locations

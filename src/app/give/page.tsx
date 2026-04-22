@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import GiveClient from "./PartnershipClient";
+import GiveClient from "./GiveClient";
 
 export const metadata: Metadata = {
   title: "OVCN Give | OVCN",

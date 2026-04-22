@@ -116,7 +116,7 @@ const Give = () => {
   return (
     <Tabs
       defaultValue="naira"
-      className="w-full flex flex-col gap-10 py-20 px-6 lg:px-20"
+      className="w-full flex flex-col gap-10 py-14 px-6 lg:p-20"
     >
       <div className="flex items-start md:items-center flex-col md:flex-row gap-5 md:gap-0 justify-between">
         <div className="w-full max-w-xl flex flex-col md:gap-2 gap-1">

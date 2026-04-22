@@ -36,7 +36,7 @@ const GiveClient = () => {
         </section>
 
         <section className="min-h-screen w-full flex items-center justify-center">
-          <div className="flex flex-col gap-10 items-center py-20 px-6 lg:px-20">
+          <div className="flex flex-col gap-10 items-center py-14 px-6 lg:p-20">
             <div className="lg:w-6xl w-full lg:text-7xl text-5xl text-center italic font-extralight font-serif">
               Each of you should give what you have decided in your heart to
               give, not reluctantly or under compulsion, for God loves a
