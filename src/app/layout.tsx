@@ -12,7 +12,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Omega Vision Christian Network",
-  description: "The Adullam of Destiny",
+  description: "EPIKAIZO, atmosphere of worship, deep sound and light",
   openGraph: {
     title: "Omega Vision Christian Network",
     description: "The Adullam of Destiny",
