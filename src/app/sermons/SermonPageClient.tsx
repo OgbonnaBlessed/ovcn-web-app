@@ -84,7 +84,7 @@ const SermonPageClient = () => {
         className="relative min-h-screen w-full bg-black"
       >
         <Image
-          src="/about-us.jpg"
+          src="/sermon-icon.jpg"
           fill
           alt="Partnership"
           quality={100}
@@ -188,6 +188,7 @@ const SermonPageClient = () => {
                       width={400}
                       height={250}
                       className="w-full aspect-video object-cover rounded-lg"
+                      preload
                     />
                     <div className="py-4 flex flex-col gap-2">
                       <h2 className="text-lg">{sermon.title}</h2>

@@ -5,7 +5,7 @@ import Footer from "@/components/shared/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { campuses } from "@/data/campuses";
+import { campuses } from "@/data/locations";
 import { fadeInUp } from "@/helper/motion";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -114,81 +114,83 @@ const ContactClient = () => {
           </div>
         </section>
 
-        <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 py-24 px-8 lg:px-20 w-full">
-          <div className="flex flex-col md:gap-4 gap-2 w-full lg:w-1/2">
-            <h2 className="lg:text-7xl text-4xl font-bold w-full">
-              Get in touch
-            </h2>
-            <p className="text-base sm:text-lg">email@omegavision.com</p>
-            <p className="text-base sm:text-lg">+234 (0XX) XXX XXX</p>
-            <p className="text-base sm:text-lg lg:w-md">
-              14th Felicia Coker Street, Pipeline Fagba, Lagos State, Nigeria.
-            </p>
-          </div>
+        <section className="relative w-full min-h-screen flex items-center justify-center">
+          <div className="w-full flex flex-col md:flex-row gap-5 md:gap-10 py-14 px-6 lg:p-20 pb-20">
+            <div className="flex flex-col md:gap-4 gap-2 w-full lg:w-1/2">
+              <h2 className="lg:text-5xl text-3xl font-bold w-full">
+                Get in touch
+              </h2>
+              <p className="text-sm md:text-base">email@omegavision.com</p>
+              <p className="text-sm md:text-base">+234 (0XX) XXX XXX</p>
+              <p className="text-sm md:text-base lg:w-md">
+                14th Felicia Coker Street, Pipeline Fagba, Lagos State, Nigeria.
+              </p>
+            </div>
 
-          <form
-            onSubmit={handleSubmit}
-            className="w-full lg:w-1/2 flex flex-col gap-12 sm:gap-16"
-          >
-            <div className="flex flex-col md:flex-row md:items-center gap-12 sm:gap-16">
-              <div className="flex flex-col gap-2 w-full">
-                <h3>First Name</h3>
-                <Input
-                  type="text"
-                  id="firstname"
-                  autoComplete="off"
-                  value={formData.firstname}
-                  onChange={handleForm}
-                  className="border-0 border-b-2 border-accent-foreground outline-none fous:ring-0 focus:outline-none transition-all duration-300 ease-in-out rounded-none shadow-none px-0 w-full"
-                />
-              </div>
-              <div className="flex flex-col gap-2 w-full">
-                <h3>Last Name</h3>
-                <Input
-                  type="text"
-                  id="lastname"
-                  autoComplete="off"
-                  value={formData.lastname}
-                  onChange={handleForm}
-                  className="border-0 border-b-2 border-accent-foreground outline-none fous:ring-0 focus:outline-none transition-all duration-300 ease-in-out rounded-none shadow-none px-0 w-full"
-                />
-              </div>
-            </div>
-            <div className="flex flex-col gap-2">
-              <h3>Email</h3>
-              <Input
-                id="email"
-                autoComplete="off"
-                value={formData.email}
-                onChange={handleForm}
-                className="border-0 border-b-2 border-accent-foreground outline-none fous:ring-0 focus:outline-none transition-all duration-300 ease-in-out rounded-none shadow-none px-0"
-              />
-            </div>
-            <div className="flex flex-col gap-2 w-full">
-              <h3>Message</h3>
-              <Textarea
-                id="message"
-                autoComplete="off"
-                rows={10}
-                value={formData.message}
-                onChange={handleForm}
-                className="border-0 border-b-2 border-accent-foreground outline-none fous:ring-0 focus:outline-none transition-all duration-300 ease-in-out min-w-[12rem] rounded-none shadow-none px-0 resize-none w-full"
-              />
-            </div>
-            <Button
-              type="submit"
-              className="w-fit self-start cursor-pointer rounded-full px-8 py-5 active:scale-80 transition-all duration-500 ease-in-out"
+            <form
+              onSubmit={handleSubmit}
+              className="w-full lg:w-1/2 flex flex-col gap-12 sm:gap-16"
             >
-              Submit
-            </Button>
-          </form>
-        </div>
+              <div className="flex flex-col md:flex-row md:items-center gap-12 sm:gap-16">
+                <div className="flex flex-col gap-2 w-full">
+                  <h3>First Name</h3>
+                  <Input
+                    type="text"
+                    id="firstname"
+                    autoComplete="off"
+                    value={formData.firstname}
+                    onChange={handleForm}
+                    className="border-0 border-b-2 border-accent-foreground outline-none fous:ring-0 focus:outline-none transition-all duration-300 ease-in-out rounded-none shadow-none px-0 w-full"
+                  />
+                </div>
+                <div className="flex flex-col gap-2 w-full">
+                  <h3>Last Name</h3>
+                  <Input
+                    type="text"
+                    id="lastname"
+                    autoComplete="off"
+                    value={formData.lastname}
+                    onChange={handleForm}
+                    className="border-0 border-b-2 border-accent-foreground outline-none fous:ring-0 focus:outline-none transition-all duration-300 ease-in-out rounded-none shadow-none px-0 w-full"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col gap-2">
+                <h3>Email</h3>
+                <Input
+                  id="email"
+                  autoComplete="off"
+                  value={formData.email}
+                  onChange={handleForm}
+                  className="border-0 border-b-2 border-accent-foreground outline-none fous:ring-0 focus:outline-none transition-all duration-300 ease-in-out rounded-none shadow-none px-0"
+                />
+              </div>
+              <div className="flex flex-col gap-2 w-full">
+                <h3>Message</h3>
+                <Textarea
+                  id="message"
+                  autoComplete="off"
+                  rows={10}
+                  value={formData.message}
+                  onChange={handleForm}
+                  className="border-0 border-b-2 border-accent-foreground outline-none fous:ring-0 focus:outline-none transition-all duration-300 ease-in-out min-w-[12rem] rounded-none shadow-none px-0 resize-none w-full"
+                />
+              </div>
+              <Button
+                type="submit"
+                className="w-fit self-start cursor-pointer rounded-full px-8 py-5 active:scale-80 transition-all duration-500 ease-in-out"
+              >
+                Submit
+              </Button>
+            </form>
+          </div>
+        </section>
 
         <section
           id="our-locations"
-          className="relative w-full min-h-screen flex items-center justify-center"
+          className="relative w-full min-h-screen flex items-center justify-center pb-20"
         >
-          <div className="w-full flex flex-col md:flex-row gap-5 md:gap-10 py-14 px-6 lg:p-20 pb-20">
+          <div className="w-full flex flex-col md:flex-row gap-5 md:gap-10 py-14 px-6 lg:p-20">
             <div className="w-full max-w-md flex flex-col md:gap-2 gap-1">
               <h2 className="lg:text-5xl text-3xl font-bold w-full">
                 Our Locations

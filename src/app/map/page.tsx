@@ -1,13 +1,13 @@
 import { Metadata } from "next";
-import GiveClient from "./GiveClient";
+import MapClient from "./MapClient";
 
 export const metadata: Metadata = {
-  title: "OVCN Give | OVCN",
-  description: "Partner with us to impact lives",
+  title: "OVCN Map | OVCN",
+  description: "Explore our map locations",
   openGraph: {
-    title: "OVCN Give | OVCN",
-    description: "Partner with us to impact lives",
-    url: "https://omegavisionchristiannetwork.com/give/",
+    title: "OVCN Map | OVCN",
+    description: "Explore our map locations",
+    url: "https://omegavisionchristiannetwork.com/map/",
     siteName: "OVCN",
     images: [
       {
@@ -19,17 +19,16 @@ export const metadata: Metadata = {
     type: "website",
   },
 
-  // --- Twitter (X) Card metadata ---
   twitter: {
     card: "summary_large_image",
-    title: "Give | OVCN",
-    description: "Partner with us to impact lives",
+    title: "Map | OVCN",
+    description: "Explore our map locations",
     images: ["https://omegavisionchristiannetwork.com/about-us.jpg"],
   },
 };
 
 const page = () => {
-  return <GiveClient />;
+  return <MapClient />;
 };
 
 export default page;

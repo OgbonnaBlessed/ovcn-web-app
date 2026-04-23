@@ -11,7 +11,7 @@ import { useState } from "react";
 const OnlineClient = () => {
   const [isLive, setIsLive] = useState({
     youtube: false,
-    mixlr: false,
+    waystream: false,
   });
 
   const meetings = ["Sunday", "Wednesday", "3rd Friday"];
@@ -89,10 +89,10 @@ const OnlineClient = () => {
           <div className="w-full flex flex-col gap-10 py-14 px-6 lg:p-20">
             <div className="w-full max-w-2xl flex flex-col md:gap-2 gap-1 text-center mx-auto">
               <h2 className="lg:text-5xl text-3xl font-bold w-full">
-                Live Coverage on Mixlr
+                Live Coverage on Waystream
               </h2>
               <p className="text-sm md:text-base">
-                Join services via Mixlr on Sundays by 12:00PM, Wednesdays by
+                Join services via Waystream on Sundays by 12:00PM, Wednesdays by
                 5:30PM, and 3rd fridays by 6:00PM
               </p>
             </div>
@@ -102,7 +102,7 @@ const OnlineClient = () => {
                 <div key={i} className="flex flex-col gap-2 items-start">
                   <div className="flex justify-start items-center gap-2 bg-[#41413F] text-sm text-white px-6 py-4 cursor-pointer min-w-[12rem] rounded-lg ">
                     <Play fill="#fff" className="p-1 text-white" />
-                    <p>{isLive.mixlr ? "Live" : "Offline"}</p>
+                    <p>{isLive.waystream ? "Live" : "Offline"}</p>
                   </div>
                   <div>{meeting}</div>
                 </div>

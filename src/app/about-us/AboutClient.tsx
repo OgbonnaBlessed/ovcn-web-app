@@ -2,7 +2,7 @@
 
 import CarouselDemo from "@/components/shared/Carousel";
 import Footer from "@/components/shared/Footer";
-import { campuses } from "@/data/campuses";
+import { campuses } from "@/data/locations";
 import { fadeInUp } from "@/helper/motion";
 import { motion } from "framer-motion";
 import { Clock, Instagram, Play } from "lucide-react";
@@ -122,22 +122,24 @@ const AboutClient = () => {
               </div>
               <div className="flex flex-col md:flex-row align-top justify-between gap-5 md:gap-10 text-sm md:text-base">
                 <p>
-                  In 2010, driven by a deep desire to encounter the realities of
-                  the Spirit, Apostle Clement Gabriel embarked on a journey that
-                  would forever transform lives. The foundation of our ministry
-                  was laid in fervent prayer, as Apostle
+                  In 2010, driven by a hunger for a true encounter with God,
+                  Apostle Gabriel Clement began a journey rooted in prayer and
+                  dependence on the Holy Spirit. What started as a small
+                  gathering soon became a place of powerful transformation.
                 </p>
 
                 <p>
-                  Clement, inspired by Jeremiah 33:3, called upon God for
-                  guidance and power: &quot;Call to me and I will answer you and
-                  tell you great and unsearchable things you do not
+                  As the vision unfolded, the ministry grew, drawing people
+                  seeking truth and purpose. Through the Word and spiritual
+                  encounters, the church became a strong foundation for faith
+                  and discipleship.
                 </p>
 
                 <p>
-                  Clement, inspired by Jeremiah 33:3, called upon God for
-                  guidance and power: &quot;Call to me and I will answer you and
-                  tell you great and unsearchable things you do not
+                  Today, Omega Vision Christian Network is a thriving community,
+                  committed to raising believers who reflect Christ. From humble
+                  beginnings, our mission remains clear, to shine God’s light
+                  and impact lives.
                 </p>
               </div>
             </div>
@@ -182,18 +184,18 @@ const AboutClient = () => {
 
               <div className="flex flex-col md:flex-row align-top justify-between gap-5 md:gap-10 text-sm md:text-base">
                 <p className="text-start">
-                  Our vision is to be a beacon of God&apos;s light, transforming
-                  lives through the power of the Holy Spirit and the unchanging
-                  Word of God. We aspire to create an environment where
-                  individuals can encounter God intimately, experience His love
-                  profoundly, and be equipped to live victoriously in Christ.
+                  Our vision is to be a beacon of God’s light, where lives are
+                  transformed through the power of the Holy Spirit and the
+                  unchanging truth of His Word. We exist to create an atmosphere
+                  where people can genuinely encounter God, grow in intimacy
+                  with Him, and walk in the fullness of their divine purpose.
                 </p>
                 <p>
-                  Our mission is to glorify God by making disciples of all
-                  nations, rooted in the teachings of Jesus Christ and guided by
-                  the Holy Spirit. We are committed to: Proclaiming the Gospel,
-                  Fostering Spiritual Growth, Building a Community of Believers,
-                  Empowering for Service, Impacting the Community.
+                  We are devoted to proclaiming the Gospel with clarity,
+                  nurturing spiritual growth through sound teaching, building a
+                  strong and united community, and empowering believers to serve
+                  and make meaningful impact in their families, communities, and
+                  beyond.
                 </p>
               </div>
             </div>
@@ -208,7 +210,7 @@ const AboutClient = () => {
             <h1 className="lg:text-5xl text-3xl font-bold">Mission</h1>
             <div className="w-full flex flex-col gap-5 md:gap-10 text-lg leading-relaxed">
               <div className="w-full flex items-center gap-10">
-                <div className="relative hidden md:block flex-1 h-96">
+                <div className="relative flex-1 h-96">
                   <Image
                     src="/mission-1.png"
                     fill
@@ -217,7 +219,7 @@ const AboutClient = () => {
                   />
                 </div>
 
-                <div className="relative flex-1 h-52 md:h-96">
+                <div className="relative hidden md:block flex-1 h-52 md:h-96">
                   <Image
                     src="/mission-2.png"
                     fill
@@ -238,18 +240,17 @@ const AboutClient = () => {
 
               <div className="flex flex-col md:flex-row align-top justify-between gap-5 md:gap-10 text-sm md:text-base">
                 <p className="text-start">
-                  Our vision is to be a beacon of God&apos;s light, transforming
-                  lives through the power of the Holy Spirit and the unchanging
-                  Word of God. We aspire to create an environment where
-                  individuals can encounter God intimately, experience His love
-                  profoundly, and be equipped to live victoriously in Christ.
+                  Our mission is to glorify God by raising disciples who are
+                  firmly rooted in the teachings of Jesus Christ and guided
+                  daily by the Holy Spirit. We exist to lead people into a
+                  deeper relationship with God and a life that reflects His
+                  truth.
                 </p>
                 <p>
-                  Our mission is to glorify God by making disciples of all
-                  nations, rooted in the teachings of Jesus Christ and guided by
-                  the Holy Spirit. We are committed to: Proclaiming the Gospel,
-                  Fostering Spiritual Growth, Building a Community of Believers,
-                  Empowering for Service, Impacting the Community.
+                  We are committed to proclaiming the Gospel with clarity and
+                  power, nurturing spiritual growth through sound teaching, and
+                  equipping believers to live lives of purpose, faith, and
+                  impact in every sphere of influence.
                 </p>
               </div>
             </div>
@@ -359,18 +360,18 @@ const AboutClient = () => {
 
                 <div className="max-w-2xl w-full flex flex-col items-center gap-5 text-sm md:text-base">
                   <p>
-                    Our mission is to glorify God by making disciples of all
-                    nations, rooted in the teachings of Jesus Christ and guided
-                    by the Holy Spirit. We are committed to: Proclaiming the
-                    Gospel, Fostering Spiritual Growth, Building a Community of
-                    Believers, Empowering for Service, Impacting the Community.
+                    Apostle Gabriel Clement is a devoted servant of God with a
+                    strong passion for revealing Christ and raising a generation
+                    rooted in truth and empowered by the Holy Spirit. His
+                    ministry is marked by a deep commitment to prayer, sound
+                    teaching, and the demonstration of God’s power.
                   </p>
 
                   <p>
-                    Our mission is grounded in the belief that every life can be
-                    transformed by the power of the Gospel. Our mission is
-                    grounded in the belief that every life can be transformed by
-                    the power of the Gospel.
+                    Through his leadership, Omega Vision Christian Network has
+                    grown into a vibrant community where lives are changed,
+                    faith is strengthened, and individuals are empowered to
+                    reflect Christ in every area of life.
                   </p>
 
                   <div className="flex items-center gap-5">
