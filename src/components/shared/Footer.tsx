@@ -28,7 +28,10 @@ const Footer = () => {
           name: "Watch on Instagram",
           href: "https://www.instagram.com/apostlegabrielclement?igsh=cTVoemM2ZzNoOTFx",
         },
-        { name: "Listen on way stream", href: "/" },
+        {
+          name: "Listen on Waystream",
+          href: "https://app.waystream.io/live/omegavisionchristiannetwork",
+        },
         { name: "Sermons", href: "/sermons" },
       ],
     },
@@ -77,7 +80,9 @@ const Footer = () => {
                 <p className="tracking-wider">Christian Network</p>
               </div>
             </Link>
-            <p className="text-sm md:text-base">14 Felicia Coker Street, Pipeline, Fagba, Lagos.</p>
+            <p className="text-sm md:text-base">
+              14 Felicia Coker Street, Pipeline, Fagba, Lagos.
+            </p>
           </div>
 
           <div className="flex flex-col md:flex-row gap-10 lg:gap-24">
@@ -108,6 +113,8 @@ const Footer = () => {
                       <Link
                         key={idx}
                         href={navLink.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="hover:underline"
                       >
                         {navLink.name}

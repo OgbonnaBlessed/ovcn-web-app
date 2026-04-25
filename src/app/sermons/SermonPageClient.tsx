@@ -176,20 +176,21 @@ const SermonPageClient = () => {
                 {filteredSermons.map((sermon) => (
                   <motion.div
                     key={sermon.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="overflow-hidden"
+                    
                   >
-                    <Image
-                      src={sermon.thumbnail}
-                      alt={sermon.title}
-                      width={400}
-                      height={250}
-                      className="w-full aspect-video object-cover rounded-lg"
-                      preload
-                    />
+                    <div className="relative w-full aspect-video rounded-lg overflow-hidden">
+                      <Image
+                        src={sermon.thumbnail}
+                        alt={sermon.title}
+                        fill
+                        className="object-cover object-top"
+                        preload
+                      />
+                    </div>
                     <div className="py-4 flex flex-col gap-2">
                       <h2 className="text-lg">{sermon.title}</h2>
                       <p className="text-sm text-accent-foreground">

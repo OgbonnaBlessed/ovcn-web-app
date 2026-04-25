@@ -48,8 +48,8 @@ const AboutClient = () => {
             src="/about-us.jpg"
             fill
             alt="About us"
-            quality={100}
-            preload
+            priority
+            sizes="100vw"
             className="object-cover object-top"
           />
           <div className="absolute flex flex-col gap-5 lg:px-20 px-8 top-1/2 transform -translate-y-1/4 text-white w-full">
@@ -67,7 +67,7 @@ const AboutClient = () => {
                     width={20}
                     height={20}
                     alt="star"
-                    preload
+                    loading="lazy"
                   />
                   <p>{a}</p>
                 </div>
@@ -108,6 +108,7 @@ const AboutClient = () => {
                     src="/history-1.jpg"
                     fill
                     alt="Early days"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover object-center"
                   />
                 </div>
@@ -116,6 +117,7 @@ const AboutClient = () => {
                     src="/history-2.jpg"
                     fill
                     alt="Early days"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover object-center"
                   />
                 </div>
@@ -159,6 +161,7 @@ const AboutClient = () => {
                     src="/mission-1.png"
                     fill
                     alt="Teaching the Word"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover object-center"
                   />
                 </div>
@@ -168,6 +171,7 @@ const AboutClient = () => {
                     src="/mission-2.png"
                     fill
                     alt="Discipleship and growth"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover object-center"
                   />
                 </div>
@@ -177,6 +181,7 @@ const AboutClient = () => {
                     src="/about-us.jpg"
                     fill
                     alt="Discipleship and growth"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover object-center"
                   />
                 </div>
@@ -215,6 +220,7 @@ const AboutClient = () => {
                     src="/mission-1.png"
                     fill
                     alt="Teaching the Word"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover object-center"
                   />
                 </div>
@@ -224,6 +230,7 @@ const AboutClient = () => {
                     src="/mission-2.png"
                     fill
                     alt="Discipleship and growth"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover object-center"
                   />
                 </div>
@@ -233,6 +240,7 @@ const AboutClient = () => {
                     src="/about-us.jpg"
                     fill
                     alt="Discipleship and growth"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover object-center"
                   />
                 </div>
@@ -290,6 +298,7 @@ const AboutClient = () => {
                     src={service.image}
                     fill
                     alt={service.name}
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover object-center"
                   />
 
@@ -349,6 +358,7 @@ const AboutClient = () => {
                   src="/apostle.jpeg"
                   alt="Apostle Gabriel Clement"
                   fill
+                  sizes="(max-width: 768px) 100vw, 400px"
                   className="object-cover object-top"
                 />
               </div>

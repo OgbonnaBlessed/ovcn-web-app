@@ -6,7 +6,7 @@ const SermonsCardSkeleton = () => {
       <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
         {Array.from({ length: 6 }).map((_, i) => (
           <div key={i} className="space-y-3">
-            <Skeleton className="w-full h-60 rounded-xl" />
+            <Skeleton className="w-full aspect-video rounded-xl" />
             <Skeleton className="h-5 w-3/4" />
             <Skeleton className="h-4 w-1/2" />
             <Skeleton className="h-4 w-1/3" />
