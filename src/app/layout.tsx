@@ -12,10 +12,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Omega Vision Christian Network",
-  description: "The Adullam of Destiny",
+  description: "EPIKAIZO, atmosphere of worship, deep sound and light",
   openGraph: {
     title: "Omega Vision Christian Network",
-    description: "The Adullam of Destiny",
+    description: "EPIKAIZO, atmosphere of worship, deep sound and light",
     url: "https://omegavisionchristiannetwork.com/",
     siteName: "OVCN",
     images: [
@@ -28,11 +28,10 @@ export const metadata: Metadata = {
     type: "website",
   },
 
-  // --- Twitter (X) Card metadata ---
   twitter: {
     card: "summary_large_image",
-    title: "About Us | OVCN",
-    description: "Get to know who we are",
+    title: "Omega Vision Christian Network",
+    description: "EPIKAIZO, atmosphere of worship, deep sound and light",
     images: ["https://omegavisionchristiannetwork.com/about-us.jpg"],
   },
 };
