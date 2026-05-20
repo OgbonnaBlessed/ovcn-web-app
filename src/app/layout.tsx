@@ -11,16 +11,48 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://omegavisionchristiannetwork.com"),
+
   title: "Omega Vision Christian Network",
   description: "EPIKAIZO, atmosphere of worship, deep sound and light",
+
+  icons: {
+    icon: [
+      {
+        url: "/favicon-16x16.png",
+        sizes: "16x16",
+        type: "image/png",
+      },
+      {
+        url: "/favicon-32x32.png",
+        sizes: "32x32",
+        type: "image/png",
+      },
+      {
+        url: "/favicon.ico",
+        sizes: "any",
+      },
+    ],
+
+    apple: [
+      {
+        url: "/apple-touch-icon.png",
+        sizes: "180x180",
+        type: "image/png",
+      },
+    ],
+  },
+
+  manifest: "/site.webmanifest",
+
   openGraph: {
     title: "Omega Vision Christian Network",
     description: "EPIKAIZO, atmosphere of worship, deep sound and light",
-    url: "https://omegavisionchristiannetwork.com/",
+    url: "/",
     siteName: "OVCN",
     images: [
       {
-        url: "https://omegavisionchristiannetwork.com/about-us.jpg",
+        url: "/about-us.jpg",
         width: 1200,
         height: 630,
       },
@@ -32,7 +64,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Omega Vision Christian Network",
     description: "EPIKAIZO, atmosphere of worship, deep sound and light",
-    images: ["https://omegavisionchristiannetwork.com/about-us.jpg"],
+    images: ["/about-us.jpg"],
   },
 };
 
@@ -44,9 +76,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className}`}>
-          <Navbar />
-          <main className="min-h-screen">{children}</main>
-          <Toaster />
+        <Navbar />
+        <main className="min-h-screen">{children}</main>
+        <Toaster />
       </body>
     </html>
   );

@@ -1,11 +1,11 @@
 "use client";
 
+import { AnimatePresence, motion } from "framer-motion";
+import { X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { MobileSidebarTrigger } from "./MobileSidebarTrigger";
-import { motion, AnimatePresence } from "framer-motion";
-import { X } from "lucide-react";
 
 const Navbar = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -32,7 +32,7 @@ const Navbar = () => {
     <div className="w-full fixed flex items-baseline justify-between px-6 lg:px-20 py-4 bg-black/20 text-white backdrop-blur-sm z-50">
       <Link href="/" className="flex items-center gap-2">
         <Image
-          src="/new-logo.png"
+          src="/logo.png"
           width={60}
           height={40}
           alt="Logo"

@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OVCN Online | OVCN",
     description: "Join us online",
-    url: "https://omegavisionchristiannetwork.com/online/",
+    url: "/online",
     siteName: "OVCN",
     images: [
       {
-        url: "https://omegavisionchristiannetwork.com/sermon-icon.jpg",
+        url: "/sermon-icon.jpg",
         width: 1200,
         height: 630,
       },
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Online | OVCN",
     description: "Join us online",
-    images: ["https://omegavisionchristiannetwork.com/sermon-icon.jpg"],
+    images: ["/sermon-icon.jpg"],
   },
 };
 
