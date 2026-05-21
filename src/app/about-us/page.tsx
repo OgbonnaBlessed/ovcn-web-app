@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     siteName: "OVCN",
     images: [
       {
-        url: "/about-us.jpg",
+        url: "/about-us.png",
         width: 1200,
         height: 630,
       },
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Us | OVCN",
     description: "Get to know who we are",
-    images: ["/about-us.jpg"],
+    images: ["/about-us.png"],
   },
 };
 
