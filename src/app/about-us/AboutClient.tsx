@@ -45,7 +45,7 @@ const AboutClient = () => {
           className="relative min-h-screen w-full bg-black"
         >
           <Image
-            src="/about-us.jpg"
+            src="/about-us.png"
             fill
             alt="About us"
             priority
