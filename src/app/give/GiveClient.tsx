@@ -15,7 +15,7 @@ const GiveClient = () => {
           className="relative min-h-screen w-full bg-black"
         >
           <Image
-            src="/about-us.jpg"
+            src="/partnership.png"
             fill
             alt="Partnership"
             quality={100}
