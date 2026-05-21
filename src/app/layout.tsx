@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     siteName: "OVCN",
     images: [
       {
-        url: "/about-us.jpg",
+        url: "/home.png",
         width: 1200,
         height: 630,
       },
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Omega Vision Christian Network",
     description: "EPIKAIZO, atmosphere of worship, deep sound and light",
-    images: ["/about-us.jpg"],
+    images: ["/home.png"],
   },
 };
 
