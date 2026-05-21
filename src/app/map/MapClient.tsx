@@ -16,7 +16,7 @@ const MapClient = () => {
           className="relative min-h-screen w-full bg-black"
         >
           <Image
-            src="/about-us.jpg"
+            src="/about-us.png"
             fill
             alt="Partnership"
             quality={100}
