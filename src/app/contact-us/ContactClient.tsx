@@ -90,11 +90,19 @@ const ContactClient = () => {
     <>
       <div className="w-full max-w-screen overflow-x-hidden scroll-smooth">
         <section
+<<<<<<< HEAD
           id="contact"
           className="relative min-h-screen w-full bg-black"
         >
           <Image
             src="/contact.png"
+=======
+          id="partnership"
+          className="relative min-h-screen w-full bg-black"
+        >
+          <Image
+            src="/about-us.jpg"
+>>>>>>> 866240b55cae6e309e8ceccbe70f8b1243e01ff8
             fill
             alt="Partnership"
             quality={100}

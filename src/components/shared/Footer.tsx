@@ -69,7 +69,11 @@ const Footer = () => {
           <div className="flex flex-col gap-2">
             <Link href="/" className="flex items-center gap-2">
               <Image
+<<<<<<< HEAD
                 src="/logo.png"
+=======
+                src="/new-logo.png"
+>>>>>>> 866240b55cae6e309e8ceccbe70f8b1243e01ff8
                 width={60}
                 height={40}
                 alt="Logo"
@@ -113,6 +117,11 @@ const Footer = () => {
                       <Link
                         key={idx}
                         href={navLink.href}
+<<<<<<< HEAD
+=======
+                        target="_blank"
+                        rel="noopener noreferrer"
+>>>>>>> 866240b55cae6e309e8ceccbe70f8b1243e01ff8
                         className="hover:underline"
                       >
                         {navLink.name}

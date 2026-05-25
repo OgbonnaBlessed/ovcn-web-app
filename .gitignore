@@ -40,5 +40,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+<<<<<<< HEAD
 *.mp4
 public/ovcn.mp4
+=======
+public/ovcn.mp4
+*.mp4
+>>>>>>> 866240b55cae6e309e8ceccbe70f8b1243e01ff8

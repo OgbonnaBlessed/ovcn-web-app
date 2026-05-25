@@ -178,7 +178,11 @@ const AboutClient = () => {
 
                 <div className="relative hidden md:block flex-1 h-96">
                   <Image
+<<<<<<< HEAD
                     src="/about-us.png"
+=======
+                    src="/about-us.jpg"
+>>>>>>> 866240b55cae6e309e8ceccbe70f8b1243e01ff8
                     fill
                     alt="Discipleship and growth"
                     sizes="(max-width: 768px) 100vw, 33vw"
@@ -237,7 +241,11 @@ const AboutClient = () => {
 
                 <div className="relative hidden md:block flex-1 h-96">
                   <Image
+<<<<<<< HEAD
                     src="/about-us.png"
+=======
+                    src="/about-us.jpg"
+>>>>>>> 866240b55cae6e309e8ceccbe70f8b1243e01ff8
                     fill
                     alt="Discipleship and growth"
                     sizes="(max-width: 768px) 100vw, 33vw"
