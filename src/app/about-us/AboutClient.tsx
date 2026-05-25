@@ -14,6 +14,7 @@ import {
   FaXTwitter,
   FaYoutube,
 } from "react-icons/fa6";
+import { Button } from "@/components/ui/button";
 
 const services = [
   {
@@ -178,11 +179,7 @@ const AboutClient = () => {
 
                 <div className="relative hidden md:block flex-1 h-96">
                   <Image
-<<<<<<< HEAD
                     src="/about-us.png"
-=======
-                    src="/about-us.jpg"
->>>>>>> 866240b55cae6e309e8ceccbe70f8b1243e01ff8
                     fill
                     alt="Discipleship and growth"
                     sizes="(max-width: 768px) 100vw, 33vw"
@@ -241,11 +238,7 @@ const AboutClient = () => {
 
                 <div className="relative hidden md:block flex-1 h-96">
                   <Image
-<<<<<<< HEAD
                     src="/about-us.png"
-=======
-                    src="/about-us.jpg"
->>>>>>> 866240b55cae6e309e8ceccbe70f8b1243e01ff8
                     fill
                     alt="Discipleship and growth"
                     sizes="(max-width: 768px) 100vw, 33vw"
@@ -290,10 +283,9 @@ const AboutClient = () => {
               </div>
 
               <Link href="/online">
-                <div className="flex items-center gap-2 text-xs md:text-sm p-3 bg-[#0A42D0] text-white rounded-md">
-                  <p>Join us online</p>
-                  <Play size={14} />
-                </div>
+                <Button className="h-11 rounded-full bg-blue-600 px-7 text-white cursor-pointer">
+                  Join us online
+                </Button>
               </Link>
             </div>
             <div className="w-full flex flex-col gap-5 md:flex-row items-center justify-between">
@@ -344,10 +336,9 @@ const AboutClient = () => {
               </div>
 
               <Link href="/online">
-                <div className="flex items-center gap-2 text-xs md:text-sm p-3 bg-[#0A42D0] text-white rounded-md">
-                  <p>Join us online</p>
-                  <Play size={14} />
-                </div>
+                <Button className="h-11 rounded-full bg-blue-600 px-7 text-white cursor-pointer">
+                  Join us online
+                </Button>
               </Link>
             </div>
             <CarouselDemo />

@@ -11,11 +11,7 @@ export const metadata: Metadata = {
     siteName: "OVCN",
     images: [
       {
-<<<<<<< HEAD
         url: "/contact.png",
-=======
-        url: "/about-us.jpg",
->>>>>>> 866240b55cae6e309e8ceccbe70f8b1243e01ff8
         width: 1200,
         height: 630,
       },
@@ -27,11 +23,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Contact Us | OVCN",
     description: "You can reach us anytime",
-<<<<<<< HEAD
     images: ["/contact.png"],
-=======
-    images: ["/about-us.jpg"],
->>>>>>> 866240b55cae6e309e8ceccbe70f8b1243e01ff8
   },
 };
 

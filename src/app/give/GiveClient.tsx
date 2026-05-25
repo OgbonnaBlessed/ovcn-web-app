@@ -2,6 +2,7 @@
 
 import Footer from "@/components/shared/Footer";
 import Give from "@/components/shared/Give";
+import ProjectsCarousel from "@/components/shared/ProjectsCarousel";
 import { fadeInUp } from "@/helper/motion";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -43,6 +44,37 @@ const GiveClient = () => {
               cheerful giver.
             </div>
             <p className="lg:text-xl">2 Corinthians 9:7 (NIV)</p>
+          </div>
+        </section>
+
+        <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-black px-6 py-24 lg:px-20">
+          <div className="flex w-full max-w-7xl flex-col items-center">
+            <motion.div
+              custom={0}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInUp}
+              className="text-center"
+            >
+              <p className="text-sm uppercase tracking-[0.3em] text-white/60">
+                Latest Projects
+              </p>
+
+              <h2 className="mt-4 text-5xl font-bold text-white lg:text-7xl">
+                Advancing God&apos;s Kingdom
+              </h2>
+
+              <p className="mx-auto mt-6 max-w-2xl text-white/70 leading-8">
+                Be a part of what God is doing through Omega Vision Christian
+                Network as we impact lives, transform communities and spread the
+                Gospel.
+              </p>
+            </motion.div>
+
+            <div className="mt-20 w-full">
+              <ProjectsCarousel />
+            </div>
           </div>
         </section>
 

@@ -20,6 +20,7 @@ const ContactClient = () => {
     email: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
 
   const isValidEmail = (email: string) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -37,11 +38,13 @@ const ContactClient = () => {
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
 
+    if (loading) return;
+
     if (
-      !formData.firstname ||
-      !formData.lastname ||
-      !formData.email ||
-      !formData.message
+      !formData.firstname.trim() ||
+      !formData.lastname.trim() ||
+      !formData.email.trim() ||
+      !formData.message.trim()
     ) {
       toast.error("Please fill in all fields");
       return;
@@ -52,62 +55,61 @@ const ContactClient = () => {
       return;
     }
 
-    const formDataForSubmission = new FormData();
-    Object.entries(formData).forEach(([key, value]) => {
-      formDataForSubmission.append(key, value);
-    });
-
     try {
-      const response = await fetch("https://formspree.io/f/mwpqyevk", {
+      setLoading(true);
+
+      const loadingToast = toast.loading("Sending your message...");
+
+      const response = await fetch("/api/contact", {
         method: "POST",
-        body: formDataForSubmission,
         headers: {
-          Accept: "application/json",
+          "Content-Type": "application/json",
         },
+        body: JSON.stringify(formData),
       });
 
-      if (response.ok) {
-        // Reset form data on successful submission
-        setFormData({
-          firstname: "",
-          lastname: "",
-          email: "",
-          message: "",
-        });
+      const data = await response.json();
 
-        toast.success("Your message has been sent successfully!");
-      } else {
-        // Handle failure (if needed)
-        toast.error("Something went wrong. Please try again.");
+      toast.dismiss(loadingToast);
+
+      if (!response.ok) {
+        toast.error(data.message || "Something went wrong");
+        return;
       }
+
+      setFormData({
+        firstname: "",
+        lastname: "",
+        email: "",
+        message: "",
+      });
+
+      toast.success(
+        "Your message has been sent successfully. We’ll get back to you shortly.",
+      );
     } catch (error) {
-      toast.error("There was an error sending your message");
-      console.log("Error sending message:", error);
+      console.log(error);
+
+      toast.error(
+        "Unable to send your message at the moment. Please try again later.",
+      );
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
     <>
       <div className="w-full max-w-screen overflow-x-hidden scroll-smooth">
-        <section
-<<<<<<< HEAD
-          id="contact"
-          className="relative min-h-screen w-full bg-black"
-        >
+        <section id="contact" className="relative min-h-screen w-full bg-black">
           <Image
             src="/contact.png"
-=======
-          id="partnership"
-          className="relative min-h-screen w-full bg-black"
-        >
-          <Image
-            src="/about-us.jpg"
->>>>>>> 866240b55cae6e309e8ceccbe70f8b1243e01ff8
+            id="partnership"
+            className="relative min-h-screen w-full bg-black"
             fill
             alt="Partnership"
             quality={100}
             preload
-            className="object-cover object-top"
           />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white w-fit">
             <motion.div
@@ -128,8 +130,10 @@ const ContactClient = () => {
               <h2 className="lg:text-5xl text-3xl font-bold w-full">
                 Get in touch
               </h2>
-              <p className="text-sm md:text-base">email@omegavision.com</p>
-              <p className="text-sm md:text-base">+234 (0XX) XXX XXX</p>
+              <p className="text-sm md:text-base">
+                omegavision.reach@gmail.com
+              </p>
+              <p className="text-sm md:text-base">+234 818 890 5792</p>
               <p className="text-sm md:text-base lg:w-md">
                 14th Felicia Coker Street, Pipeline Fagba, Lagos State, Nigeria.
               </p>
@@ -186,9 +190,17 @@ const ContactClient = () => {
               </div>
               <Button
                 type="submit"
-                className="w-fit self-start cursor-pointer rounded-full px-8 py-5 active:scale-80 transition-all duration-500 ease-in-out"
+                disabled={loading}
+                className="w-fit self-start cursor-pointer rounded-full px-8 py-5 active:scale-95 transition-all duration-300 ease-in-out disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                Submit
+                {loading ? (
+                  <div className="flex items-center gap-2">
+                    <div className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
+                    <span>Sending...</span>
+                  </div>
+                ) : (
+                  "Submit"
+                )}
               </Button>
             </form>
           </div>
