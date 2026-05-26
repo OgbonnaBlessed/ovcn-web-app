@@ -7,9 +7,9 @@ import { useEffect, useMemo, useState } from "react";
 const PROJECTS = [
   {
     id: 1,
-    title: "Church Auditorium Expansion",
+    title: "Church Auditorium",
     description:
-      "Partner with us as we expand our worship auditorium to accommodate more lives and souls.",
+      "Partner with us as we expand our worship auditorium to accommodate more lives.",
     image: "/service-1.jpg",
   },
   {

@@ -4,6 +4,7 @@
 import Footer from "@/components/shared/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { campuses } from "@/data/locations";
 import { fadeInUp } from "@/helper/motion";
@@ -12,19 +13,24 @@ import Image from "next/image";
 import { useState } from "react";
 import { FaHandPointRight } from "react-icons/fa6";
 import { toast } from "sonner";
+import { COUNTRY_CODES } from "@/data/country-codes";
 
 const ContactClient = () => {
   const [formData, setFormData] = useState({
     firstname: "",
     lastname: "",
+    phone: "",
     email: "",
     message: "",
   });
   const [loading, setLoading] = useState(false);
+  const [countryCode, setCountryCode] = useState("+234");
 
-  const isValidEmail = (email: string) => {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const normalizePhoneNumber = (phone: string) => {
+    return phone.replace(/[^\d]/g, "");
   };
+
+  const fullPhoneNumber = `${countryCode}${normalizePhoneNumber(formData.phone)}`;
 
   const handleForm = (e: { target: { id: any; value: any } }) => {
     const { id, value } = e.target;
@@ -40,59 +46,42 @@ const ContactClient = () => {
 
     if (loading) return;
 
-    if (
-      !formData.firstname.trim() ||
-      !formData.lastname.trim() ||
-      !formData.email.trim() ||
-      !formData.message.trim()
-    ) {
-      toast.error("Please fill in all fields");
-      return;
-    }
-
-    if (!isValidEmail(formData.email)) {
-      toast.error("Please enter a valid email address");
-      return;
-    }
-
     try {
       setLoading(true);
-
-      const loadingToast = toast.loading("Sending your message...");
 
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          phone: fullPhoneNumber,
+        }),
       });
 
       const data = await response.json();
-
-      toast.dismiss(loadingToast);
 
       if (!response.ok) {
         toast.error(data.message || "Something went wrong");
         return;
       }
 
+      setCountryCode("+234");
+
       setFormData({
         firstname: "",
         lastname: "",
+        phone: "",
         email: "",
         message: "",
       });
 
-      toast.success(
-        "Your message has been sent successfully. We’ll get back to you shortly.",
-      );
+      toast.success("Message sent. We’ll get back to you shortly.");
     } catch (error) {
       console.log(error);
 
-      toast.error(
-        "Unable to send your message at the moment. Please try again later.",
-      );
+      toast.error("Please try again later.");
     } finally {
       setLoading(false);
     }
@@ -168,6 +157,66 @@ const ContactClient = () => {
                 </div>
               </div>
               <div className="flex flex-col gap-2">
+                <h3>Phone Number</h3>
+
+                <div className="flex items-end gap-3">
+                  <Select
+                    value={countryCode}
+                    onValueChange={setCountryCode}
+                    disabled={loading}
+                  >
+                    <SelectTrigger className="h-10 w-[120px] rounded-none border-0 border-b-2 border-accent-foreground bg-transparent px-0 shadow-none focus:ring-0 focus:ring-offset-0">
+                      <SelectValue placeholder="+234" />
+                    </SelectTrigger>
+
+                    <SelectContent
+                      align="start"
+                      className="rounded-xl border bg-background p-1 shadow-xl"
+                    >
+                      {COUNTRY_CODES.map((country) => (
+                        <SelectItem
+                          key={country.code}
+                          value={country.code}
+                          className="cursor-pointer rounded-lg"
+                        >
+                          <div className="flex w-full items-center justify-between gap-3">
+                            <span className="text-sm font-medium">
+                              {country.code}
+                            </span>
+                            <span className="text-xs text-muted-foreground">
+                              {country.label}
+                            </span>
+                          </div>
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+
+                  <Input
+                    id="phone"
+                    type="tel"
+                    inputMode="tel"
+                    autoComplete="off"
+                    disabled={loading}
+                    placeholder={
+                      COUNTRY_CODES.find(
+                        (country) => country.code === countryCode,
+                      )?.placeholder
+                    }
+                    value={formData.phone}
+                    onChange={(e) => {
+                      const value = e.target.value.replace(/[^\d\s()-]/g, "");
+
+                      setFormData((prevData) => ({
+                        ...prevData,
+                        phone: value,
+                      }));
+                    }}
+                    className="border-0 border-b-2 border-accent-foreground outline-none focus:outline-none transition-all duration-300 ease-in-out rounded-none shadow-none px-0"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col gap-2">
                 <h3>Email</h3>
                 <Input
                   id="email"
@@ -193,14 +242,7 @@ const ContactClient = () => {
                 disabled={loading}
                 className="w-fit self-start cursor-pointer rounded-full px-8 py-5 active:scale-95 transition-all duration-300 ease-in-out disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                {loading ? (
-                  <div className="flex items-center gap-2">
-                    <div className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
-                    <span>Sending...</span>
-                  </div>
-                ) : (
-                  "Submit"
-                )}
+                {loading ? "Sending..." : "Submit"}
               </Button>
             </form>
           </div>
