@@ -84,7 +84,7 @@ const SermonPageClient = () => {
         className="relative min-h-screen w-full bg-black"
       >
         <Image
-          src="/sermon-icon.jpg"
+          src="/sermons.png"
           fill
           alt="Partnership"
           quality={100}

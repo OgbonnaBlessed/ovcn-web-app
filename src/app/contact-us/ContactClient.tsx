@@ -92,7 +92,7 @@ const ContactClient = () => {
       <div className="w-full max-w-screen overflow-x-hidden scroll-smooth">
         <section id="contact" className="relative min-h-screen w-full bg-black">
           <Image
-            src="/contact.png"
+            src="/contact-us.png"
             id="partnership"
             className="relative min-h-screen w-full bg-black"
             fill
@@ -165,13 +165,13 @@ const ContactClient = () => {
                     onValueChange={setCountryCode}
                     disabled={loading}
                   >
-                    <SelectTrigger className="h-10 w-[120px] rounded-none border-0 border-b-2 border-accent-foreground bg-transparent px-0 shadow-none focus:ring-0 focus:ring-offset-0">
+                    <SelectTrigger className="h-10 w-[120px] rounded-none border-0 border-b-2 border-accent-foreground bg-transparent px-0 shadow-none focus:ring-0 focus:ring-offset-0 outline-none focus:outline-none cursor-pointer">
                       <SelectValue placeholder="+234" />
                     </SelectTrigger>
 
                     <SelectContent
                       align="start"
-                      className="rounded-xl border bg-background p-1 shadow-xl"
+                      className="rounded-xl !border !border-gray-300 !bg-background p-1 !shadow-xl"
                     >
                       {COUNTRY_CODES.map((country) => (
                         <SelectItem

@@ -16,9 +16,9 @@ const MapClient = () => {
           className="relative min-h-screen w-full bg-black"
         >
           <Image
-            src="/about-us.png"
+            src="/meet-and-pray.png"
             fill
-            alt="Partnership"
+            alt="Meet and Pray"
             quality={100}
             preload
             className="object-cover object-top"

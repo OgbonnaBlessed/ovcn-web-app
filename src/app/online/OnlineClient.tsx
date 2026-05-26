@@ -25,7 +25,7 @@ const OnlineClient = () => {
           className="relative min-h-screen w-full bg-black"
         >
           <Image
-            src="/about-us.jpg"
+            src="/join-us.png"
             fill
             alt="Partnership"
             quality={100}
