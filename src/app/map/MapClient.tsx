@@ -13,7 +13,7 @@ const MapClient = () => {
       <div className="w-full max-w-screen overflow-x-hidden scroll-smooth">
         <section
           id="partnership"
-          className="relative min-h-screen w-full bg-black"
+          className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-black"
         >
           <Image
             src="/meet-and-pray.png"
@@ -21,17 +21,36 @@ const MapClient = () => {
             alt="Meet and Pray"
             quality={100}
             preload
-            className="object-cover object-top"
+            className="object-cover object-center"
           />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white w-fit">
+
+          <div className="absolute inset-0 bg-black/25" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/55" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_25%,rgba(0,0,0,0.45)_100%)]" />
+          <div className="absolute bottom-0 left-0 h-32 w-full bg-gradient-to-t from-black/60 to-transparent" />
+
+          <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-6xl items-center justify-center px-6 text-center">
             <motion.div
               custom={0}
               initial="hidden"
               animate="visible"
               variants={fadeInUp}
-              className="font-bold lg:text-7xl text-5xl lg:w-6xl w-full text-center"
+              className="flex flex-col items-center"
             >
-              JOIN MAP FAMILY CLOSEST TO YOU
+              <div className="mb-6 h-px w-24 bg-white/50" />
+
+              <p className="mb-5 text-xs font-medium uppercase tracking-[0.35em] text-white/70 md:text-sm">
+                Meet And Pray
+              </p>
+
+              <h1 className="max-w-5xl text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+                JOIN MAP FAMILY CLOSEST TO YOU
+              </h1>
+
+              <p className="mt-6 max-w-2xl text-sm leading-7 text-white/75 md:text-base md:leading-8">
+                Find a prayer family near you and grow in fellowship, faith and
+                the Word.
+              </p>
             </motion.div>
           </div>
         </section>

@@ -59,7 +59,7 @@ const Navbar = () => {
           <Link href="/about-us">About us</Link>
           <Link href="/give">Give</Link>
           <Link href="/sermons">Sermons</Link>
-          <Link href="/map">Map</Link>
+          <Link href="/join">Join</Link>
         </div>
 
         <div className="block md:hidden">
@@ -121,8 +121,8 @@ const Navbar = () => {
                     <Link href="/sermons" onClick={() => setOpen(false)}>
                       Sermons
                     </Link>
-                    <Link href="/map" onClick={() => setOpen(false)}>
-                      Map
+                    <Link href="/join" onClick={() => setOpen(false)}>
+                      Join
                     </Link>
                   </div>
                 </motion.div>

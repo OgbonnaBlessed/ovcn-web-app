@@ -2,10 +2,11 @@
 
 import CarouselDemo from "@/components/shared/Carousel";
 import Footer from "@/components/shared/Footer";
+import { Button } from "@/components/ui/button";
 import { campuses } from "@/data/locations";
 import { fadeInUp } from "@/helper/motion";
 import { motion } from "framer-motion";
-import { Clock, Instagram, Play } from "lucide-react";
+import { Clock, Instagram } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -14,7 +15,6 @@ import {
   FaXTwitter,
   FaYoutube,
 } from "react-icons/fa6";
-import { Button } from "@/components/ui/button";
 
 const services = [
   {
@@ -43,7 +43,7 @@ const AboutClient = () => {
       <main className="w-full max-w-screen overflow-x-hidden scroll-smooth">
         <section
           id="who-we-are"
-          className="relative min-h-screen w-full bg-black"
+          className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-black"
         >
           <Image
             src="/about-us.png"
@@ -51,47 +51,47 @@ const AboutClient = () => {
             alt="About us"
             priority
             sizes="100vw"
-            className="object-cover object-top"
+            className="object-cover object-center"
           />
-          <div className="absolute flex flex-col gap-5 lg:px-20 px-8 top-1/2 transform -translate-y-1/4 text-white w-full">
+
+          <div className="absolute inset-0 bg-black/25" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/55" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_25%,rgba(0,0,0,0.45)_100%)]" />
+          <div className="absolute bottom-0 left-0 h-32 w-full bg-gradient-to-t from-black/60 to-transparent" />
+
+          <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-6xl items-center justify-center px-6 text-center">
             <motion.div
               custom={0}
               initial="hidden"
               animate="visible"
               variants={fadeInUp}
-              className="flex items-center sm:gap-10 gap-5 flex-wrap"
+              className="flex flex-col items-center"
             >
-              {["Worship", "Word", "Encounter"].map((a) => (
-                <div key={a} className="flex items-center gap-3">
-                  <Image
-                    src="/star.png"
-                    width={20}
-                    height={20}
-                    alt="star"
-                    loading="lazy"
-                  />
-                  <p>{a}</p>
-                </div>
-              ))}
-            </motion.div>
-            <motion.div
-              custom={1}
-              initial="hidden"
-              animate="visible"
-              variants={fadeInUp}
-              className="font-bold lg:text-7xl md:text-4xl text-3xl lg:w-2xl w-full"
-            >
-              WE ARE A BEACON OF GOD&lsquo;S LIGHT
-            </motion.div>
-            <motion.div
-              custom={2}
-              initial="hidden"
-              animate="visible"
-              variants={fadeInUp}
-              className="lg:w-xl md:text-xl text-[16px] w-full"
-            >
-              Called to shine in a world of darkness, reflecting Christ&lsquo;s
-              love, truth and hope in all we do.
+              <div className="mb-6 h-px w-24 bg-white/50" />
+
+              <p className="mb-5 text-xs font-medium uppercase tracking-[0.35em] text-white/70 md:text-sm">
+                About Us
+              </p>
+
+              <h1 className="max-w-5xl text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+                WE ARE A BEACON OF GOD&apos;S LIGHT
+              </h1>
+
+              <p className="mt-6 max-w-2xl text-sm leading-7 text-white/75 md:text-base md:leading-8">
+                Raising believers through worship, the Word and
+                life-transforming encounters with God.
+              </p>
+
+              <div className="mt-9 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+                {["Worship", "Word", "Encounter"].map((item) => (
+                  <div
+                    key={item}
+                    className="rounded-full bg-white/10 px-5 py-2 text-xs font-medium tracking-[0.22em] text-white/85 shadow-lg shadow-black/10 backdrop-blur-md transition-all duration-300 hover:bg-white/15 sm:text-sm"
+                  >
+                    {item}
+                  </div>
+                ))}
+              </div>
             </motion.div>
           </div>
         </section>
