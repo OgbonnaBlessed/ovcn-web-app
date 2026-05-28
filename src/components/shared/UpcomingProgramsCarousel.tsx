@@ -219,7 +219,7 @@ const UpcomingProgramsCarousel = () => {
             className={`h-2 rounded-full transition-all duration-300 ${
               activeIndex === index ? "w-8 bg-white" : "w-2 bg-white/35"
             }`}
-            aria-label={`Show ${program.title}`}
+            aria-label={`Show ${program.title} a`}
           />
         ))}
       </div> */}
