@@ -19,22 +19,22 @@ import {
 
 const services = [
   {
-    image: "/service-1.jpg",
+    image: "/service-1.png",
     name: "Moment of Encounter",
     day: "Sunday Service",
-    date: "12:00PM",
+    time: "12:00PM",
   },
   {
-    image: "/service-2.jpg",
+    image: "/service-2.png",
     name: "Service of Sound",
     day: "Wednesday Service",
-    date: "5:00PM",
+    time: "5:00PM",
   },
   {
-    image: "/service-3.jpg",
+    image: "/service-3.png",
     name: "Monthly Mega Meeting",
     day: "Third Fridays of the month",
-    date: "6:00PM",
+    time: "6:00PM",
   },
 ];
 
@@ -43,7 +43,7 @@ const aboutSections = [
     id: "our-history",
     label: "Our Story",
     title: "From hunger to a house of encounter",
-    images: ["/history-1.jpg", "/history-2.jpg"],
+    images: ["/history-1.png", "/history-2.png"],
     paragraphs: [
       "In 2010, driven by a hunger for a true encounter with God, Apostle Gabriel Clement began a journey rooted in prayer and dependence on the Holy Spirit.",
       "What started as a small gathering soon became a place of transformation, drawing people seeking truth, purpose, and the reality of God’s presence.",
@@ -54,7 +54,7 @@ const aboutSections = [
     id: "our-vision",
     label: "Vision",
     title: "A people formed by light, truth and encounter",
-    images: ["/mission-1.png", "/mission-2.png"],
+    images: ["/mission.png", "/mission-2.jpeg"],
     paragraphs: [
       "Our vision is to be a beacon of God’s light, where lives are transformed through the power of the Holy Spirit and the unchanging truth of His Word.",
       "We exist to create an atmosphere where people can genuinely encounter God, grow in intimacy with Him, and walk in the fullness of divine purpose.",
@@ -64,15 +64,13 @@ const aboutSections = [
     id: "our-mission",
     label: "Mission",
     title: "Raising disciples rooted in Christ",
-    images: ["/mission-2.png", "/about-us.png"],
+    images: ["/new-mission-2.png", "/about-us.png"],
     paragraphs: [
       "Our mission is to glorify God by raising disciples who are firmly rooted in the teachings of Jesus Christ and guided daily by the Holy Spirit.",
       "We are committed to proclaiming the Gospel with clarity and power, nurturing spiritual growth through sound teaching, and equipping believers for lives of faith and impact.",
     ],
   },
 ];
-
-const values = ["Worship", "Word", "Encounter", "Prayer", "Light", "Purpose"];
 
 const ParallaxImage = ({
   src,
@@ -106,7 +104,7 @@ const AboutClient = () => {
   return (
     <>
       <main className="w-full max-w-screen overflow-x-hidden scroll-smooth">
-        {/* Hero Section — unchanged */}
+        {/* Hero Section */}
         <section
           id="who-we-are"
           className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-black"
@@ -182,7 +180,7 @@ const AboutClient = () => {
                   />
                 </div>
 
-                <div className="grid grid-cols-1 gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+                <div className="grid grid-cols-1 gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
                   <div>
                     <p className="text-xs font-medium uppercase tracking-[0.3em] text-accent-foreground">
                       {section.label}
@@ -201,33 +199,6 @@ const AboutClient = () => {
                 </div>
               </motion.section>
             ))}
-          </div>
-        </section>
-
-        {/* Values */}
-        <section className="relative overflow-hidden bg-black px-6 py-24 text-white lg:px-20">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(10,66,208,0.18),transparent_55%)]" />
-
-          <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-10 text-center">
-            <p className="text-xs uppercase tracking-[0.35em] text-white/50">
-              What Defines Us
-            </p>
-
-            <h2 className="max-w-4xl text-4xl font-bold leading-tight lg:text-6xl">
-              We are built around God’s presence, His Word, and transformed
-              lives.
-            </h2>
-
-            <div className="mt-8 flex flex-wrap justify-center gap-3">
-              {values.map((value) => (
-                <span
-                  key={value}
-                  className="rounded-full bg-white/10 px-5 py-2 text-xs font-medium uppercase tracking-[0.22em] text-white/80 backdrop-blur-md"
-                >
-                  {value}
-                </span>
-              ))}
-            </div>
           </div>
         </section>
 
@@ -285,8 +256,8 @@ const AboutClient = () => {
                         <p>{service.day}</p>
                         <span className="h-1 w-1 rounded-full bg-white/50" />
                         <div className="flex items-center gap-1">
-                          <Clock size={13} />
-                          <p>{service.date}</p>
+                          <Clock size={13} color="blue" />
+                          <p className="text-blue-800">{service.time}</p>
                         </div>
                       </div>
                     </div>

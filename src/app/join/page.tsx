@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import MinistriesClient from "./JoinClient";
+import JoinClient from "./JoinClient";
 
 export const metadata: Metadata = {
-  title: "Ministries | OVCN",
+  title: "OVCN Join | OVCN",
   description:
     "Explore Omega Vision Christian Network ministries, departments and upcoming programs.",
   openGraph: {
-    title: "Ministries | OVCN",
+    title: "OVCN Join | OVCN",
     description:
       "Explore Omega Vision Christian Network ministries, departments and upcoming programs.",
     url: "/join",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ministries | OVCN",
+    title: "OVCN Join | OVCN",
     description:
       "Explore Omega Vision Christian Network ministries, departments and upcoming programs.",
     images: ["/ministries.png"],
@@ -30,5 +30,5 @@ export const metadata: Metadata = {
 };
 
 export default function MinistriesPage() {
-  return <MinistriesClient />;
+  return <JoinClient />;
 }

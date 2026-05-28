@@ -60,7 +60,6 @@ const Navbar = () => {
           <Link href="/give">Give</Link>
           <Link href="/sermons">Sermons</Link>
           <Link href="/join">Join</Link>
-          <Link href="/contact-us">Contact us</Link>
         </div>
 
         <div className="block md:hidden">

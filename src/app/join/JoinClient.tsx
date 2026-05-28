@@ -14,7 +14,7 @@ const joinSections = [
     subtitle: "Meet And Pray",
     description:
       "MAP is a family-based prayer gathering where believers meet in smaller groups to pray, study the Word, build fellowship and grow spiritually within their local environment.",
-    images: ["/meet-and-pray.png", "/service-1.jpg"],
+    images: ["/meet-and-pray.png", "/meet-and-pray-2.png"],
     cta: "Join MAP",
   },
   {
@@ -22,23 +22,23 @@ const joinSections = [
     subtitle: "Parents, Adults, and Married",
     description:
       "PAM exists to strengthen homes, marriages and families through biblical wisdom, godly counsel, prayer, fellowship and spiritual growth for adults and married believers.",
-    images: ["/service-2.jpg", "/about-us.png"],
+    images: ["/pam-1.png", "/pam-2.png"],
     cta: "Join PAM",
   },
   {
-    title: "Singles and Married",
+    title: "Singles and Ready",
     subtitle: "Purpose, maturity and godly relationships",
     description:
-      "This ministry helps singles and married members grow in purpose, emotional maturity, spiritual discipline and godly relationship values rooted in the Word of God.",
-    images: ["/service-3.jpg", "/history-2.jpg"],
-    cta: "Join Singles and Married",
+      "This ministry helps singles and ready members grow in purpose, emotional maturity, spiritual discipline and godly relationship values rooted in the Word of God.",
+    images: ["/singles-and-ready-1.png", "/singles-and-ready-2.png"],
+    cta: "Join Singles and Ready",
   },
   {
     title: "Teenage Ministry",
     subtitle: "Raising young lights",
     description:
       "The Teenage Ministry is designed to help teenagers know God personally, discover their identity in Christ, build strong values and walk boldly in purpose.",
-    images: ["/mission-1.png", "/mission-2.png"],
+    images: ["/teenage-ministry-1.png", "/teenage-ministry-2.png"],
     cta: "Join Teenage Ministry",
   },
   {

@@ -7,24 +7,24 @@ import { useEffect, useMemo, useState } from "react";
 const PROJECTS = [
   {
     id: 1,
-    title: "Church Auditorium",
+    title: "Auditorium Expansion",
     description:
       "Partner with us as we expand our worship auditorium to accommodate more lives.",
-    image: "/service-1.jpg",
+    image: "/about-us.png",
   },
   {
     id: 2,
-    title: "Community Outreach",
+    title: "Infrastructure Upgrade",
     description:
-      "Reaching communities with food, support, prayer and the Gospel of Jesus Christ.",
-    image: "/service-2.jpg",
+      "Supporting worship through the installation of a 40KVA generator and standing AC systems.",
+    image: "/generator.png",
   },
   {
     id: 3,
-    title: "Media & Broadcast",
+    title: "Epikaizo Devotionals",
     description:
-      "Helping spread the Gospel globally through media, livestreams and digital ministry.",
-    image: "/service-3.jpg",
+      "Providing secondary school students with the Epikaizo devotional for spiritual growth and discipleship.",
+    image: "/epikaizo-devotionals.png",
   },
 ];
 
