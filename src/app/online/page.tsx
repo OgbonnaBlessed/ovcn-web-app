@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     siteName: "OVCN",
     images: [
       {
-        url: "/sermon-icon.jpg",
+        url: "/sermons.png",
         width: 1200,
         height: 630,
       },
