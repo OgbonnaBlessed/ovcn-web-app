@@ -47,10 +47,10 @@ export async function POST(req: Request) {
     };
 
     await resend.emails.send({
-      from: "OVCN Join Form <omegavision.reach@omegavisionchristiannetwork.com>",
+      from: `${safe.fullName} <omegavision.reach@omegavisionchristiannetwork.com>`,
       to: "omegavision.reach@gmail.com",
       replyTo: email,
-      subject: `New Join Request - ${fullName}`,
+      subject: `New Request`,
       html: `
         <div style="margin:0;padding:0;background:#f6f8fc;font-family:Arial,Helvetica,sans-serif;color:#111827;">
           <div style="max-width:680px;margin:0 auto;padding:32px 16px;">
@@ -115,18 +115,11 @@ export async function POST(req: Request) {
                     </div>
                   </div>
                 </div>
-
-                <div style="margin-top:28px;padding-top:20px;border-top:1px solid #eef2f7;">
-                  <p style="margin:0;font-size:13px;line-height:1.7;color:#6b7280;text-align:center;">
-                    You can reply directly to this email or reach us at
-                    <strong style="color:#0b2f8f;"> omegavision.reach@gmail.com</strong>.
-                  </p>
-                </div>
               </div>
             </div>
 
             <p style="margin:18px 0 0 0;text-align:center;font-size:12px;line-height:1.6;color:#9ca3af;">
-              OVCN Join Notification
+              OVCN Media
             </p>
           </div>
         </div>
@@ -134,7 +127,7 @@ export async function POST(req: Request) {
     });
 
     return NextResponse.json(
-      { message: "Join request submitted successfully" },
+      { message: "Request submitted successfully" },
       { status: 200 },
     );
   } catch (error) {

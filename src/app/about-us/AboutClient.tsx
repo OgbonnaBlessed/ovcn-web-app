@@ -81,17 +81,6 @@ const AboutClient = () => {
                 Raising believers through worship, the Word and
                 life-transforming encounters with God.
               </p>
-
-              <div className="mt-9 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
-                {["Worship", "Word", "Encounter"].map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-full bg-white/10 px-5 py-2 text-xs font-medium tracking-[0.22em] text-white/85 shadow-lg shadow-black/10 backdrop-blur-md transition-all duration-300 hover:bg-white/15 sm:text-sm"
-                  >
-                    {item}
-                  </div>
-                ))}
-              </div>
             </motion.div>
           </div>
         </section>

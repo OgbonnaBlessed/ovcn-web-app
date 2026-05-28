@@ -13,6 +13,13 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { toast } from "sonner";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../ui/select";
 
 type JoinType =
   | "MAP"
@@ -68,17 +75,17 @@ const JoinSheet = ({ type, buttonText, programTitle }: JoinSheetProps) => {
       !formData.phone.trim() ||
       !formData.email.trim()
     ) {
-      toast.error("Please fill in your full name, phone number and email.");
+      toast.error("Please fill in all fields");
       return false;
     }
 
     if (!isEmailValid) {
-      toast.error("Please enter a valid email address.");
+      toast.error("Please enter a valid email address");
       return false;
     }
 
     if (!isPhoneValid) {
-      toast.error("Please enter a valid phone number.");
+      toast.error("Please enter a valid phone number");
       return false;
     }
 
@@ -98,7 +105,7 @@ const JoinSheet = ({ type, buttonText, programTitle }: JoinSheetProps) => {
       }
 
       if (!qualifiesByStatus && age < 27) {
-        toast.error("PAM is for parents, married people, or adults aged 27+.");
+        toast.error("PAM is for parents, married people, or adults aged 27+");
         return false;
       }
     }
@@ -107,23 +114,23 @@ const JoinSheet = ({ type, buttonText, programTitle }: JoinSheetProps) => {
       const age = Number(formData.age);
 
       if (!formData.age) {
-        toast.error("Please enter your age.");
+        toast.error("Please enter your age");
         return false;
       }
 
       if (age < 13 || age > 19) {
-        toast.error("Teenage Ministry is for teenagers between 13 and 19.");
+        toast.error("Teenage Ministry is for teenagers between 13 and 19");
         return false;
       }
 
       if (!formData.address.trim()) {
-        toast.error("Please enter your address.");
+        toast.error("Please enter your address");
         return false;
       }
     }
 
     if (type === "Church Department" && !formData.department) {
-      toast.error("Please select a department.");
+      toast.error("Please select a department");
       return false;
     }
 
@@ -152,11 +159,11 @@ const JoinSheet = ({ type, buttonText, programTitle }: JoinSheetProps) => {
       const data = await response.json();
 
       if (!response.ok) {
-        toast.error(data.message || "Something went wrong.");
+        toast.error(data.message || "Something went wrong");
         return;
       }
 
-      toast.success("Your request has been submitted successfully.");
+      toast.success("Your request has been submitted successfully");
 
       setFormData({
         fullName: "",
@@ -234,31 +241,51 @@ const JoinSheet = ({ type, buttonText, programTitle }: JoinSheetProps) => {
           )}
 
           {type === "PAM" && (
-            <select
+            <Select
               value={formData.status}
-              onChange={(e) => updateField("status", e.target.value)}
-              className="h-10 rounded-md border bg-background px-3 text-sm"
+              onValueChange={(value) => updateField("status", value)}
+              disabled={loading}
             >
-              <option value="">Select status</option>
-              <option value="Parent">Parent</option>
-              <option value="Married">Married</option>
-              <option value="27 years or above">27 years or above</option>
-            </select>
+              <SelectTrigger className="h-11 w-full rounded-md">
+                <SelectValue placeholder="Select status" />
+              </SelectTrigger>
+
+              <SelectContent className="rounded-xl border bg-background p-1 shadow-xl">
+                {["Parent", "Married", "27 years or above"].map((status) => (
+                  <SelectItem
+                    key={status}
+                    value={status}
+                    className="cursor-pointer rounded-lg"
+                  >
+                    {status}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
           )}
 
           {type === "Church Department" && (
-            <select
+            <Select
               value={formData.department}
-              onChange={(e) => updateField("department", e.target.value)}
-              className="h-10 rounded-md border bg-background px-3 text-sm"
+              onValueChange={(value) => updateField("department", value)}
+              disabled={loading}
             >
-              <option value="">Select department</option>
-              {departments.map((department) => (
-                <option key={department} value={department}>
-                  {department}
-                </option>
-              ))}
-            </select>
+              <SelectTrigger className="h-11 w-full rounded-md">
+                <SelectValue placeholder="Select department" />
+              </SelectTrigger>
+
+              <SelectContent className="rounded-xl border bg-background p-1 shadow-xl">
+                {departments.map((department) => (
+                  <SelectItem
+                    key={department}
+                    value={department}
+                    className="cursor-pointer rounded-lg"
+                  >
+                    {department}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
           )}
 
           <Textarea
@@ -271,7 +298,7 @@ const JoinSheet = ({ type, buttonText, programTitle }: JoinSheetProps) => {
           <Button
             disabled={loading}
             onClick={handleSubmit}
-            className="mt-2 rounded-full"
+            className="bg-blue-700 hover:bg-blue-600 p-6 mt-2 rounded-full cursor-pointer"
           >
             {loading ? "Submitting..." : "Submit"}
           </Button>

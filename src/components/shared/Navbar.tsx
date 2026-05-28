@@ -60,6 +60,7 @@ const Navbar = () => {
           <Link href="/give">Give</Link>
           <Link href="/sermons">Sermons</Link>
           <Link href="/join">Join</Link>
+          <Link href="/contact-us">Contact us</Link>
         </div>
 
         <div className="block md:hidden">
@@ -123,6 +124,9 @@ const Navbar = () => {
                     </Link>
                     <Link href="/join" onClick={() => setOpen(false)}>
                       Join
+                    </Link>
+                    <Link href="/contact-us" onClick={() => setOpen(false)}>
+                      Contact us
                     </Link>
                   </div>
                 </motion.div>
