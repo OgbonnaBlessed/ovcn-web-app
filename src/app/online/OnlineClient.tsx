@@ -1,25 +1,43 @@
 "use client";
 
 import Footer from "@/components/shared/Footer";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { fadeInUp } from "@/helper/motion";
 import { motion } from "framer-motion";
-import { Play } from "lucide-react";
+import { ExternalLink, Play } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
-const OnlineClient = () => {
-  const [isLive, setIsLive] = useState({
-    youtube: false,
-    waystream: false,
-  });
+const YOUTUBE_CHANNEL_ID = "UCz2KfMn-6phYxlFVPWa3QhA";
+const WAYSTREAM_URL =
+  "https://app.waystream.io/live/omegavisionchristiannetwork";
 
-  const meetings = ["Sunday", "Wednesday", "3rd Friday"];
+const services = [
+  {
+    day: "Sunday",
+    time: "1:00PM",
+    description: "Join our Sunday service live.",
+  },
+  {
+    day: "Wednesday",
+    time: "6:00PM",
+    description: "Connect for our midweek service.",
+  },
+  {
+    day: "3rd Friday",
+    time: "6:00PM",
+    description: "Join our monthly third Friday meeting.",
+  },
+];
+
+const OnlineClient = () => {
+  const [playYoutube, setPlayYoutube] = useState(false);
 
   return (
     <>
       <div className="w-full overflow-x-hidden scroll-smooth">
-        {/* Hero Section */}
         <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-black">
           <Image
             src="/join-us.png"
@@ -30,16 +48,10 @@ const OnlineClient = () => {
             className="object-cover object-center"
           />
 
-          {/* Base dark overlay */}
           <div className="absolute inset-0 bg-black/25" />
-
-          {/* Soft cinematic gradient */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/55" />
-
-          {/* Warm golden glow */}
           <div className="absolute left-1/2 top-1/2 h-[360px] w-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#f5b942]/12 blur-3xl md:h-[520px] md:w-[520px]" />
 
-          {/* Content */}
           <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-6xl items-center justify-center px-6 text-center">
             <motion.div
               custom={0}
@@ -65,76 +77,111 @@ const OnlineClient = () => {
             </motion.div>
           </div>
 
-          {/* Bottom fade into next section */}
           <div className="absolute bottom-0 left-0 h-32 w-full bg-gradient-to-t from-black/60 to-transparent" />
         </section>
 
-        {/* YouTube Section */}
-        <section className="relative w-full min-h-screen flex items-center justify-center">
-          <div className="w-full flex flex-col gap-10 py-14 px-6 lg:p-20">
-            <div className="w-full max-w-2xl flex flex-col md:gap-2 gap-1 text-center mx-auto">
-              <h2 className="lg:text-5xl text-3xl font-bold w-full">
-                Live Coverage on Youtube
+        <section className="relative flex min-h-screen w-full items-center justify-center px-6 py-20 lg:px-20">
+          <div className="flex w-full max-w-6xl flex-col gap-10">
+            <div className="mx-auto flex max-w-2xl flex-col gap-3 text-center">
+              <p className="text-xs uppercase tracking-[0.3em] text-accent-foreground">
+                YouTube Live
+              </p>
+
+              <h2 className="text-4xl font-bold lg:text-6xl">
+                Live Coverage on YouTube
               </h2>
-              <p className="text-sm md:text-base">
-                Join services via Youtube on Sundays by 12:00PM, Wednesdays by
-                5:30PM, and 3rd fridays by 6:00PM
+
+              <p className="text-sm leading-7 text-accent-foreground md:text-base">
+                Watch our live services on YouTube when we are broadcasting.
               </p>
             </div>
 
-            <Card className="w-full max-w-5xl mx-auto aspect-video overflow-hidden rounded-2xl bg-accent shadow-none border-none">
-              <CardContent className="w-full h-full p-0 border-none">
-                {isLive.youtube ? (
+            <Card className="mx-auto aspect-video w-full max-w-5xl overflow-hidden rounded-3xl border-none bg-black shadow-2xl">
+              <CardContent className="h-full w-full p-0">
+                {playYoutube ? (
                   <iframe
-                    src="https://www.youtube.com/embed/live_stream?channel=UCz2KfMn-6phYxlFVPWa3QhA&autoplay=1"
+                    src={`https://www.youtube.com/embed/live_stream?channel=${YOUTUBE_CHANNEL_ID}&autoplay=1`}
+                    title="Omega Vision Christian Network YouTube Live"
                     width="100%"
                     height="100%"
-                    allow="autoplay; encrypted-media"
+                    allow="autoplay; encrypted-media; picture-in-picture"
                     allowFullScreen
+                    className="h-full w-full"
                   />
                 ) : (
-                  <div className="flex items-center justify-center w-full h-full">
-                    <p className="flex items-center bg-gray-300 text-black rounded-full p-2">
-                      <Play
-                        fill="#000"
-                        onClick={() => setIsLive({ ...isLive, youtube: true })}
-                        className="p-1 cursor-pointer"
-                      />
-                    </p>
-                  </div>
+                  <button
+                    type="button"
+                    onClick={() => setPlayYoutube(true)}
+                    className="group flex h-full w-full items-center justify-center bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.18),transparent_45%)] text-white"
+                  >
+                    <span className="flex h-20 w-20 items-center justify-center rounded-full bg-white text-black shadow-xl transition-all duration-300 group-hover:scale-110">
+                      <Play fill="currentColor" className="ml-1 h-8 w-8" />
+                    </span>
+                  </button>
                 )}
               </CardContent>
             </Card>
           </div>
         </section>
 
-        {/* Mixlr Section */}
-        <section className="relative w-full min-h-screen flex items-center justify-center pb-20">
-          <div className="w-full flex flex-col gap-10 py-14 px-6 lg:p-20">
-            <div className="w-full max-w-2xl flex flex-col md:gap-2 gap-1 text-center mx-auto">
-              <h2 className="lg:text-5xl text-3xl font-bold w-full">
+        <section className="relative flex min-h-screen w-full items-center justify-center bg-black px-6 py-20 text-white lg:px-20">
+          <div className="flex w-full max-w-7xl flex-col gap-12">
+            <div className="mx-auto flex max-w-3xl flex-col gap-3 text-center">
+              <p className="text-xs uppercase tracking-[0.3em] text-white/50">
+                Waystream Live
+              </p>
+
+              <h2 className="text-4xl font-bold lg:text-6xl">
                 Live Coverage on Waystream
               </h2>
-              <p className="text-sm md:text-base">
-                Join services via Waystream on Sundays by 12:00PM, Wednesdays by
-                5:30PM, and 3rd fridays by 6:00PM
+
+              <p className="text-sm leading-7 text-white/70 md:text-base">
+                Join our services on Waystream every Sunday by 1:00PM,
+                Wednesdays by 6:00PM, and every third Friday by 6:00PM.
               </p>
             </div>
 
-            <div className="flex justify-center gap-8 flex-wrap min-w-full">
-              {meetings.map((meeting, i) => (
-                <div key={i} className="flex flex-col gap-2 items-start">
-                  <div className="flex justify-start items-center gap-2 bg-[#41413F] text-sm text-white px-6 py-4 cursor-pointer min-w-[12rem] rounded-lg ">
-                    <Play fill="#fff" className="p-1 text-white" />
-                    <p>{isLive.waystream ? "Live" : "Offline"}</p>
-                  </div>
-                  <div>{meeting}</div>
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+              {services.map((service) => (
+                <div
+                  key={service.day}
+                  className="rounded-3xl border border-white/10 bg-white/[0.06] p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.09]"
+                >
+                  <p className="text-sm uppercase tracking-[0.25em] text-white/45">
+                    {service.day}
+                  </p>
+
+                  <h3 className="mt-4 text-3xl font-bold">{service.time}</h3>
+
+                  <p className="mt-4 text-sm leading-7 text-white/65">
+                    {service.description}
+                  </p>
                 </div>
               ))}
+            </div>
+
+            <div className="mx-auto flex flex-col items-center gap-4 text-center">
+              <Link
+                href={WAYSTREAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="h-12 rounded-full bg-white px-8 text-black hover:bg-white/90">
+                  <Play fill="currentColor" className="mr-2 h-4 w-4" />
+                  Open Waystream
+                  <ExternalLink className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+
+              <p className="max-w-xl text-xs leading-6 text-white/45">
+                If the live stream has not started yet, the Waystream page may
+                show as offline until service begins.
+              </p>
             </div>
           </div>
         </section>
       </div>
+
       <Footer />
     </>
   );

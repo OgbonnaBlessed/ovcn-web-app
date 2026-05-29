@@ -128,7 +128,7 @@ const JoinClient = () => {
                       index % 2 === 1 ? "lg:order-2" : ""
                     }`}
                   >
-                    <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-muted shadow-sm sm:aspect-[3/4]">
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-muted shadow-sm sm:aspect-[3/4]">
                       <Image
                         src={section.images[0]}
                         alt={section.title}
