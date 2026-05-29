@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     siteName: "OVCN",
     images: [
       {
-        url: "/sermon-icon.jpg",
+        url: "/sermons.png",
         width: 1200,
         height: 630,
       },
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Sermons | OVCN",
     description: "What God is saying now",
-    images: ["/sermon-icon.jpg"],
+    images: ["/sermons.png"],
   },
 };
 

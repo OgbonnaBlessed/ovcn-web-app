@@ -1,37 +1,18 @@
 "use client";
 
-import JoinSheet from "@/components/shared/JoinSheet";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 
 const PROGRAMS = [
   {
     id: 1,
-    title: "Night of Encounter",
+    title: "Mentorship Class with Apostle Gabriel Clement",
+    current: true,
     description:
-      "A powerful atmosphere of worship, prayer and deep encounters with God.",
-    image: "/service-1.jpg",
-  },
-  {
-    id: 2,
-    title: "Worship & Word Conference",
-    description:
-      "A gathering designed to stir hunger for God’s presence and His Word.",
-    image: "/service-2.jpg",
-  },
-  {
-    id: 3,
-    title: "Youth Revival Meeting",
-    description: "Raising a generation burning with purpose, purity and power.",
-    image: "/service-3.jpg",
-  },
-  {
-    id: 4,
-    title: "Prayer and Prophetic Meeting",
-    description:
-      "A sacred gathering for prayer, prophetic direction and spiritual renewal.",
-    image: "/meet-and-pray.png",
+      "A transformative mentorship experience focused on spiritual growth, wisdom, leadership and purposeful living through biblical teachings and practical guidance.",
+    image: "/APG-mentorship-class.jpeg",
   },
 ];
 
@@ -78,10 +59,13 @@ const UpcomingProgramsCarousel = () => {
       setPhase("shift");
     }, ACTIVE_DURATION + REVEAL_DURATION);
 
-    const nextTimer = setTimeout(() => {
-      setActiveIndex((prev) => (prev + 1) % PROGRAMS.length);
-      setPhase("active");
-    }, ACTIVE_DURATION + REVEAL_DURATION + SHIFT_DURATION);
+    const nextTimer = setTimeout(
+      () => {
+        setActiveIndex((prev) => (prev + 1) % PROGRAMS.length);
+        setPhase("active");
+      },
+      ACTIVE_DURATION + REVEAL_DURATION + SHIFT_DURATION,
+    );
 
     return () => {
       clearTimeout(revealTimer);
@@ -90,28 +74,20 @@ const UpcomingProgramsCarousel = () => {
     };
   }, [activeIndex]);
 
-  // const handleManualSelect = (index: number) => {
-  //   if (index === activeIndex) return;
-
-  //   setPhase("active");
-  //   setActiveIndex(index);
-  // };
-
   const isActivePhase = phase === "active";
 
   return (
     <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center overflow-hidden">
       <div className="relative flex h-[350px] w-full items-center justify-center overflow-hidden sm:h-[430px] lg:h-[520px]">
-        <div className="pointer-events-none absolute left-0 top-0 z-40 h-full w-16 bg-gradient-to-r from-black to-transparent sm:w-28" />
-        <div className="pointer-events-none absolute right-0 top-0 z-40 h-full w-16 bg-gradient-to-l from-black to-transparent sm:w-28" />
+        <div className="pointer-events-none absolute left-0 top-0 z-40 h-full w-16 bg-gradient-to-r from-[#F8F9FB] to-transparent sm:w-28" />
+        <div className="pointer-events-none absolute right-0 top-0 z-40 h-full w-16 bg-gradient-to-l from-[#F8F9FB] to-transparent sm:w-28" />
 
         {orderedPrograms.map((program, index) => {
           const isCurrent = index === 0;
           const isNext = index === 1;
           const isVisibleInLine = !isActivePhase && index <= 3;
 
-          const xPosition =
-            index * cardGap - (phase === "shift" ? cardGap : 0);
+          const xPosition = index * cardGap - (phase === "shift" ? cardGap : 0);
 
           return (
             <motion.article
@@ -136,10 +112,9 @@ const UpcomingProgramsCarousel = () => {
                       : 1
                     : 0,
                 filter:
-                  isActivePhase && isCurrent
-                    ? "blur(0px)"
-                    : "blur(0.15px)",
-                zIndex: isActivePhase && isCurrent ? 30 : PROGRAMS.length - index,
+                  isActivePhase && isCurrent ? "blur(0px)" : "blur(0.15px)",
+                zIndex:
+                  isActivePhase && isCurrent ? 30 : PROGRAMS.length - index,
               }}
               transition={{
                 x: {
@@ -188,41 +163,26 @@ const UpcomingProgramsCarousel = () => {
           duration: 0.5,
           ease: "easeOut",
         }}
-        className="pointer-events-auto mt-8 flex min-h-[220px] w-full max-w-3xl flex-col items-center text-center text-white"
+        className="pointer-events-auto mt-8 flex min-h-[220px] w-full max-w-3xl flex-col items-center text-center text-black"
       >
-        <p className="text-xs uppercase tracking-[0.3em] text-white/50">
-          Upcoming Program
+        <p className="text-xs uppercase tracking-[0.3em] text-accent-foreground">
+          {activeProgram.current ? "(Ongoing)" : "(Upcoming)"}
         </p>
 
         <h3 className="mt-4 text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
           {activeProgram.title}
         </h3>
 
-        <p className="mt-4 max-w-xl text-sm leading-7 text-white/70 sm:text-base">
+        <p className="mt-4 max-w-xl text-sm leading-7 text-accent-foreground sm:text-base">
           {activeProgram.description}
         </p>
 
-        {isActivePhase && (
-          <JoinSheet
-            type="Upcoming Program"
-            programTitle={activeProgram.title}
-            buttonText="Join Program"
-          />
-        )}
+        <Link href="/about-us">
+          <button className="mt-6 rounded-full bg-blue-700 py-3 px-6 text-sm font-bold text-white hover:bg-blue-600 transition-colors duration-300">
+            Learn more
+          </button>
+        </Link>
       </motion.div>
-
-      {/* <div className="mt-3 flex items-center justify-center gap-2">
-        {PROGRAMS.map((program, index) => (
-          <button
-            key={program.id}
-            onClick={() => handleManualSelect(index)}
-            className={`h-2 rounded-full transition-all duration-300 ${
-              activeIndex === index ? "w-8 bg-white" : "w-2 bg-white/35"
-            }`}
-            aria-label={`Show ${program.title} a`}
-          />
-        ))}
-      </div> */}
     </div>
   );
 };

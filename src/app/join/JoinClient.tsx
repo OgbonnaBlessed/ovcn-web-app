@@ -46,7 +46,7 @@ const joinSections = [
     subtitle: "Serve with your gift",
     description:
       "Church Departments give you the opportunity to serve faithfully with your gifts, time and commitment. Whether in music, media, prayer, protocol, welfare or other areas of service, there is a place for you to contribute to what God is doing through the church.",
-    images: ["/service-1.jpg", "/service-2.jpg"],
+    images: ["/church-department-1.png", "/church-department-2.png"],
     cta: "Join a Department",
   },
 ];
@@ -57,7 +57,7 @@ const JoinClient = () => {
       <main className="w-full max-w-screen overflow-x-hidden scroll-smooth">
         <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-black">
           <Image
-            src="/meet-and-pray.png"
+            src="/join.png"
             fill
             alt="Join"
             quality={100}
@@ -173,7 +173,7 @@ const JoinClient = () => {
           </div>
         </section>
 
-        <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-black px-5 py-20 sm:px-6 sm:py-24 lg:px-20">
+        <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-[#F8F9FB] px-5 py-20 sm:px-6 sm:py-24 lg:px-20">
           <div className="flex w-full max-w-7xl flex-col items-center">
             <motion.div
               custom={0}
@@ -183,15 +183,15 @@ const JoinClient = () => {
               variants={fadeInUp}
               className="text-center"
             >
-              <p className="text-xs uppercase tracking-[0.25em] text-white/60 sm:text-sm sm:tracking-[0.3em]">
+              <p className="text-xs uppercase tracking-[0.25em] text-accent-foreground sm:text-sm sm:tracking-[0.3em]">
                 Upcoming Programs
               </p>
 
-              <h2 className="mt-4 text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-7xl">
+              <h2 className="mt-4 text-4xl font-bold leading-tight text-black sm:text-5xl lg:text-7xl">
                 Moments You Shouldn&apos;t Miss
               </h2>
 
-              <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-white/70 sm:text-base sm:leading-8">
+              <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-accent-foreground sm:text-base sm:leading-8">
                 Stay connected to upcoming gatherings, meetings and special
                 programs at Omega Vision Christian Network.
               </p>

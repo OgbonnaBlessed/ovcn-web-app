@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     siteName: "OVCN",
     images: [
       {
-        url: "/partnership.png",
+        url: "/give.png",
         width: 1200,
         height: 630,
       },
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Give | OVCN",
     description: "Partner with us to impact lives",
-    images: ["/partnership.png"],
+    images: ["/give.png"],
   },
 };
 

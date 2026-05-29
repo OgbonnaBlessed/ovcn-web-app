@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     siteName: "OVCN",
     images: [
       {
-        url: "/ministries.png",
+        url: "/join.png",
         width: 1200,
         height: 630,
       },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: "OVCN Join | OVCN",
     description:
       "Explore Omega Vision Christian Network ministries, departments and upcoming programs.",
-    images: ["/ministries.png"],
+    images: ["/join.png"],
   },
 };
 

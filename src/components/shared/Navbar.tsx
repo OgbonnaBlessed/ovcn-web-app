@@ -124,9 +124,6 @@ const Navbar = () => {
                     <Link href="/join" onClick={() => setOpen(false)}>
                       Join
                     </Link>
-                    <Link href="/contact-us" onClick={() => setOpen(false)}>
-                      Contact us
-                    </Link>
                   </div>
                 </motion.div>
               </>

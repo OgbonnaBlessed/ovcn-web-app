@@ -124,18 +124,18 @@ const OnlineClient = () => {
           </div>
         </section>
 
-        <section className="relative flex min-h-screen w-full items-center justify-center bg-black px-6 py-20 text-white lg:px-20">
+        <section className="relative flex min-h-screen w-full items-center justify-center bg-[#F8F9FB] px-6 py-20 lg:px-20">
           <div className="flex w-full max-w-7xl flex-col gap-12">
             <div className="mx-auto flex max-w-3xl flex-col gap-3 text-center">
-              <p className="text-xs uppercase tracking-[0.3em] text-white/50">
+              <p className="text-xs uppercase tracking-[0.3em] text-accent-foreground">
                 Waystream Live
               </p>
 
-              <h2 className="text-4xl font-bold lg:text-6xl">
+              <h2 className="text-4xl font-bold text-black lg:text-6xl">
                 Live Coverage on Waystream
               </h2>
 
-              <p className="text-sm leading-7 text-white/70 md:text-base">
+              <p className="text-sm leading-7 text-accent-foreground md:text-base">
                 Join our services on Waystream every Sunday by 1:00PM,
                 Wednesdays by 6:00PM, and every third Friday by 6:00PM.
               </p>
@@ -145,15 +145,17 @@ const OnlineClient = () => {
               {services.map((service) => (
                 <div
                   key={service.day}
-                  className="rounded-3xl border border-white/10 bg-white/[0.06] p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.09]"
+                  className="rounded-3xl bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
                 >
-                  <p className="text-sm uppercase tracking-[0.25em] text-white/45">
+                  <p className="text-sm uppercase tracking-[0.25em] text-accent-foreground">
                     {service.day}
                   </p>
 
-                  <h3 className="mt-4 text-3xl font-bold">{service.time}</h3>
+                  <h3 className="mt-4 text-3xl font-bold text-black">
+                    {service.time}
+                  </h3>
 
-                  <p className="mt-4 text-sm leading-7 text-white/65">
+                  <p className="mt-4 text-sm leading-7 text-accent-foreground">
                     {service.description}
                   </p>
                 </div>
@@ -166,14 +168,14 @@ const OnlineClient = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button className="h-12 rounded-full bg-white px-8 text-black hover:bg-white/90">
+                <Button className="h-12 rounded-full bg-blue-700 px-8 text-white hover:bg-blue-600">
                   <Play fill="currentColor" className="mr-2 h-4 w-4" />
                   Open Waystream
                   <ExternalLink className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
 
-              <p className="max-w-xl text-xs leading-6 text-white/45">
+              <p className="max-w-xl text-xs leading-6 text-accent-foreground">
                 If the live stream has not started yet, the Waystream page may
                 show as offline until service begins.
               </p>
