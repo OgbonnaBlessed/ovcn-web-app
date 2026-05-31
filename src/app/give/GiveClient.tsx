@@ -182,10 +182,26 @@ const GiveClient = () => {
         </section>
 
         <section className="relative overflow-hidden bg-white px-6 py-24 lg:px-20">
-          <div className="pointer-events-none absolute right-0 top-0 h-96 w-96 rounded-full bg-blue-100/70 blur-3xl" />
-          <div className="pointer-events-none absolute bottom-0 left-0 h-96 w-96 rounded-full bg-yellow-100/60 blur-3xl" />
+          <div className="pointer-events-none absolute right-0 top-0 h-96 w-96 rounded-full bg-yellow-100/60 blur-3xl" />
+          <div className="pointer-events-none absolute bottom-0 left-0 h-96 w-96  rounded-full bg-blue-100/70 blur-3xl" />
 
           <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-12 lg:grid-cols-2">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.25 }}
+              variants={fadeInUp}
+              custom={1}
+              className="relative h-[340px] overflow-hidden rounded-[2rem] bg-muted shadow-xl shadow-black/5 sm:h-[440px] lg:h-[560px]"
+            >
+              <Image
+                src="/partnership.png"
+                alt="Become a partner"
+                fill
+                className="object-cover object-center transition-transform duration-700 hover:scale-105"
+              />
+            </motion.div>
+
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -236,22 +252,6 @@ const GiveClient = () => {
               <div className="mt-8">
                 <PartnerSheet />
               </div>
-            </motion.div>
-
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.25 }}
-              variants={fadeInUp}
-              custom={1}
-              className="relative h-[340px] overflow-hidden rounded-[2rem] bg-muted shadow-xl shadow-black/5 sm:h-[440px] lg:h-[560px]"
-            >
-              <Image
-                src="/partnership.png"
-                alt="Become a partner"
-                fill
-                className="object-cover object-center transition-transform duration-700 hover:scale-105"
-              />
             </motion.div>
           </div>
         </section>
