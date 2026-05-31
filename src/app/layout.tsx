@@ -16,32 +16,32 @@ export const metadata: Metadata = {
   title: "Omega Vision Christian Network",
   description: "EPIKAIZO, atmosphere of worship, deep sound and light",
 
-  // icons: {
-  //   icon: [
-  //     {
-  //       url: "/favicon-16x16.png",
-  //       sizes: "16x16",
-  //       type: "image/png",
-  //     },
-  //     {
-  //       url: "/favicon-32x32.png",
-  //       sizes: "32x32",
-  //       type: "image/png",
-  //     },
-  //     {
-  //       url: "/favicon.ico",
-  //       sizes: "any",
-  //     },
-  //   ],
+  icons: {
+    icon: [
+      {
+        url: "/favicon-16x16.png",
+        sizes: "16x16",
+        type: "image/png",
+      },
+      {
+        url: "/favicon-32x32.png",
+        sizes: "32x32",
+        type: "image/png",
+      },
+      {
+        url: "/favicon.ico",
+        sizes: "any",
+      },
+    ],
 
-  //   apple: [
-  //     {
-  //       url: "/apple-touch-icon.png",
-  //       sizes: "180x180",
-  //       type: "image/png",
-  //     },
-  //   ],
-  // },
+    apple: [
+      {
+        url: "/apple-touch-icon.png",
+        sizes: "180x180",
+        type: "image/png",
+      },
+    ],
+  },
 
   manifest: "/site.webmanifest",
 
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     siteName: "OVCN",
     images: [
       {
-        url: "/home.png",
+        url: "/optimized/home.aivf",
         width: 1200,
         height: 630,
       },
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Omega Vision Christian Network",
     description: "EPIKAIZO, atmosphere of worship, deep sound and light",
-    images: ["/home.png"],
+    images: ["/optimized/home.aivf"],
   },
 };
 

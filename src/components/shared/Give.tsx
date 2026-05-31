@@ -35,7 +35,6 @@ const Give = () => {
 
   const naira = [
     { image: "/fidelity.png", bank: "FIDELITY BANK", number: "5600524355" },
-    { image: "/fidelity.png", bank: "FIDELITY BANK", number: "7082979949" },
     { image: "/moniepoint.png", bank: "MONIEPOINT", number: "4001355562" },
   ];
 

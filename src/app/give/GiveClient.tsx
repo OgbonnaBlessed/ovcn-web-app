@@ -16,7 +16,7 @@ const GiveClient = () => {
           className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-black"
         >
           <Image
-            src="/give.png"
+            src="/optimized/about-us.webp"
             fill
             alt="Partnership"
             quality={100}

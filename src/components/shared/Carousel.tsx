@@ -33,28 +33,35 @@ const CarouselDemo = () => {
 
   const testimonies = [
     {
-      name: "Apostle Gabriel Clement",
-      image: "/apostle.jpeg",
+      name: "Micheal Toafeek",
+      image: "/taofeek-micheal.png",
       about:
-        "Apostle Gabriel is the founder and senior pastor of OVCN, a passionate teacher of the Word, and a prophetic voice to the nations.",
+        "I joined Omega Vision as a young teenager searching for meaning. Through the Holy Ghost, Apostle’s teachings and the atmosphere, I found clarity, growth, strength and purpose.",
     },
     {
-      name: "Dr. Pastor Gabriel Priscillia",
-      image: "/pastor-priscillia-gabriel.jpeg",
+      name: "Isaiah Ojo",
+      image: "/isaiah-ojo.jpeg",
       about:
-        "An optomerist and woman of God, Dr. Priscillia is a healing evangelist and intercessor, raising women of virtue and purpose.",
+        "Omega Vision became home to me. Through seasoned prayers, revelation from God’s Word and Apostle’s teachings, I experienced alignment, growth and even saw healing ministered through prayer.",
     },
     {
-      name: "Pastor Mark Williams",
-      image: "/pastor-mark-williams.jpeg",
+      name: "Oyindamola Animashaun",
+      image: "/oyindamola-animashaun.jpeg",
       about:
-        "Pastor Mark is known for his deep insights into scripture and his compassionate shepherding, bringing clarity and direction to many lives.",
+        "Omega Vision gave me more than a church; it gave me direction, identity and family. Through Apostle’s teachings, my prayer life, ministry, career and vision were transformed.",
     },
     {
-      name: "Pastor Ifeanyi Agwu",
-      image: "/pastor-ify.jpeg",
+      name: "Victor Etaze",
+      image: "/victor-etaze.jpeg",
       about:
-        "With a strong pastoral heart and a burden for spiritual growth, Pastor Ifeanyi labors to see believers rooted in truth and love.",
+        "I came to Omega Vision as a secondary school boy, but through the teachings and atmosphere, I discovered righteousness in Christ, spiritual stability and a deeper walk with God.",
+    },
+    
+    {
+      name: "Mechie Joy",
+      image: "/joy-mechie.jpeg",
+      about:
+        "Through Omega Vision, I moved from knowing about God to truly knowing Him. Apostle’s timely teachings brought direction, strength, correction and deep spiritual growth to my life.",
     },
   ];
 
@@ -79,9 +86,7 @@ const CarouselDemo = () => {
                 <p className="text-muted-foreground text-base w-full">
                   {t.about}
                 </p>
-                <h3 className="text-lg mt-5">
-                  {t.name}
-                </h3>
+                <h3 className="text-lg mt-5">{t.name}</h3>
               </Card>
             </CarouselItem>
           ))}
