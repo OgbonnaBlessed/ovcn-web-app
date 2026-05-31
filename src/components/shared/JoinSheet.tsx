@@ -188,7 +188,7 @@ const JoinSheet = ({ type, buttonText, programTitle }: JoinSheetProps) => {
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
-        <Button className="bg-blue-600 hover:bg-blue-500 ease-in-out duration-300 mt-8 rounded-full p-6 cursor-pointer">
+        <Button className="rounded-full bg-blue-700 px-7 py-6 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 transition-all duration-300 hover:bg-blue-700 hover:scale-[1.02] hover:opacity-95 mt-8 cursor-pointer">
           {buttonText}
         </Button>
       </SheetTrigger>
@@ -298,7 +298,7 @@ const JoinSheet = ({ type, buttonText, programTitle }: JoinSheetProps) => {
           <Button
             disabled={loading}
             onClick={handleSubmit}
-            className="bg-blue-700 hover:bg-blue-600 p-6 mt-2 rounded-full cursor-pointer"
+            className="rounded-full bg-blue-700 px-7 py-6 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 transition-all duration-300 hover:bg-blue-700 hover:scale-[1.02] hover:opacity-95 cursor-pointer"
           >
             {loading ? "Submitting..." : "Submit"}
           </Button>

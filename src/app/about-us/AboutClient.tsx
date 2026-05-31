@@ -222,7 +222,7 @@ const AboutClient = () => {
               </div>
 
               <Link href="/online">
-                <Button className="h-11 rounded-full bg-blue-600 px-7 text-white">
+                <Button className="rounded-full bg-blue-700 px-7 py-6 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 transition-all duration-300 hover:bg-blue-700 hover:scale-[1.02] hover:opacity-95 cursor-pointer">
                   Join us online
                 </Button>
               </Link>
@@ -248,9 +248,7 @@ const AboutClient = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
                     <div className="absolute bottom-5 left-5 right-5 text-white">
-                      <h3 className="text-xl font-semibold">
-                        {service.name}
-                      </h3>
+                      <h3 className="text-xl font-semibold">{service.name}</h3>
 
                       <div className="mt-2 flex items-center gap-2 text-sm text-white/75">
                         <p>{service.day}</p>
@@ -290,7 +288,7 @@ const AboutClient = () => {
               </div>
 
               <Link href="/online">
-                <Button className="h-11 rounded-full bg-blue-600 px-7 text-white">
+                <Button className="rounded-full bg-blue-700 px-7 py-6 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 transition-all duration-300 hover:bg-blue-700 hover:scale-[1.02] hover:opacity-95 cursor-pointer">
                   Join us online
                 </Button>
               </Link>
