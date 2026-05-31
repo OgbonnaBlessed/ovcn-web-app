@@ -141,7 +141,7 @@ const GiveClient = () => {
               </p>
 
               <h2 className="mt-4 max-w-xl text-4xl font-bold leading-tight tracking-tight text-slate-950 lg:text-6xl">
-                Give to our Man of God
+                Partner with our Man of God
               </h2>
 
               <p className="mt-5 max-w-xl text-sm leading-7 text-slate-600 md:text-base md:leading-8">
