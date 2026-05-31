@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  // metadataBase: new URL("https://omegavisionchristiannetwork.com"),
+  metadataBase: new URL("https://omegavisionchristiannetwork.com"),
 
   title: "Omega Vision Christian Network",
   description: "EPIKAIZO, atmosphere of worship, deep sound and light",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     siteName: "OVCN",
     images: [
       {
-        url: "https://omegavisionchristiannetwork.com/optimized/home.aivf",
+        url: "/optimized/home.aivf",
         width: 1200,
         height: 630,
       },
