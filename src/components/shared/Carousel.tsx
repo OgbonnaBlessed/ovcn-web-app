@@ -52,7 +52,7 @@ const CarouselDemo = () => {
     },
     {
       name: "Victor Etaze",
-      image: "/victor-etaze.avif",
+      image: "/victor-etaze.JPEG",
       about:
         "I came to Omega Vision as a secondary school boy, but through the teachings and atmosphere, I discovered righteousness in Christ, spiritual stability and a deeper walk with God.",
     },
