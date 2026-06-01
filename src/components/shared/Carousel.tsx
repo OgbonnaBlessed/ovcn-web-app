@@ -52,13 +52,13 @@ const CarouselDemo = () => {
     },
     {
       name: "Victor Etaze",
-      image: "/victor-etaze.jpeg",
+      image: "/victor-etaze.avif",
       about:
         "I came to Omega Vision as a secondary school boy, but through the teachings and atmosphere, I discovered righteousness in Christ, spiritual stability and a deeper walk with God.",
     },
     
     {
-      name: "Mechie Joy",
+      name: "Joy Mechie",
       image: "/joy-mechie.jpeg",
       about:
         "Through Omega Vision, I moved from knowing about God to truly knowing Him. Apostle’s timely teachings brought direction, strength, correction and deep spiritual growth to my life.",
