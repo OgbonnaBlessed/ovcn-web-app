@@ -11,48 +11,16 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://omegavisionchristiannetwork.com"),
-
   title: "Omega Vision Christian Network",
   description: "EPIKAIZO, atmosphere of worship, deep sound and light",
-
-  icons: {
-    icon: [
-      {
-        url: "/favicon-16x16.png",
-        sizes: "16x16",
-        type: "image/png",
-      },
-      {
-        url: "/favicon-32x32.png",
-        sizes: "32x32",
-        type: "image/png",
-      },
-      {
-        url: "/favicon.ico",
-        sizes: "any",
-      },
-    ],
-
-    apple: [
-      {
-        url: "/apple-touch-icon.png",
-        sizes: "180x180",
-        type: "image/png",
-      },
-    ],
-  },
-
-  manifest: "/site.webmanifest",
-
   openGraph: {
     title: "Omega Vision Christian Network",
     description: "EPIKAIZO, atmosphere of worship, deep sound and light",
-    url: "/",
+    url: "https://omegavisionchristiannetwork.com/",
     siteName: "OVCN",
     images: [
       {
-        url: "/optimized/home.aivf",
+        url: "https://omegavisionchristiannetwork.com/home.png",
         width: 1200,
         height: 630,
       },
@@ -64,9 +32,67 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Omega Vision Christian Network",
     description: "EPIKAIZO, atmosphere of worship, deep sound and light",
-    images: ["/optimized/home.aivf"],
+    images: ["https://omegavisionchristiannetwork.com/home.png"],
   },
 };
+
+// export const metadata: Metadata = {
+//   metadataBase: new URL("https://omegavisionchristiannetwork.com"),
+
+//   title: "Omega Vision Christian Network",
+//   description: "EPIKAIZO, atmosphere of worship, deep sound and light",
+
+//   icons: {
+//     icon: [
+//       {
+//         url: "/favicon-16x16.png",
+//         sizes: "16x16",
+//         type: "image/png",
+//       },
+//       {
+//         url: "/favicon-32x32.png",
+//         sizes: "32x32",
+//         type: "image/png",
+//       },
+//       {
+//         url: "/favicon.ico",
+//         sizes: "any",
+//       },
+//     ],
+
+//     apple: [
+//       {
+//         url: "/apple-touch-icon.png",
+//         sizes: "180x180",
+//         type: "image/png",
+//       },
+//     ],
+//   },
+
+//   manifest: "/site.webmanifest",
+
+//   openGraph: {
+//     title: "Omega Vision Christian Network",
+//     description: "EPIKAIZO, atmosphere of worship, deep sound and light",
+//     url: "/",
+//     siteName: "OVCN",
+//     images: [
+//       {
+//         url: "/optimized/home.aivf",
+//         width: 1200,
+//         height: 630,
+//       },
+//     ],
+//     type: "website",
+//   },
+
+//   twitter: {
+//     card: "summary_large_image",
+//     title: "Omega Vision Christian Network",
+//     description: "EPIKAIZO, atmosphere of worship, deep sound and light",
+//     images: ["/optimized/home.aivf"],
+//   },
+// };
 
 export default function RootLayout({
   children,
