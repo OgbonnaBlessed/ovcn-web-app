@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OVCN About | OVCN",
     description: "Get to know who we are",
-    url: "/about-us",
+    url: "https://omegavisionchristiannetwork.com/about-us",
     siteName: "OVCN",
     images: [
       {
-        url: "/about-us.png",
+        url: "https://omegavisionchristiannetwork.com/about-us.jpeg",
         width: 1200,
         height: 630,
       },
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "About Us | OVCN",
+    title: "OVCN About | OVCN",
     description: "Get to know who we are",
-    images: ["/about-us.png"],
+    images: ["https://omegavisionchristiannetwork.com/about-us.jpeg"],
   },
 };
 

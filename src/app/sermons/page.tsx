@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OVCN Sermons | OVCN",
     description: "What God is saying now",
-    url: "/sermons",
+    url: "https://omegavisionchristiannetwork.com/sermons",
     siteName: "OVCN",
     images: [
       {
-        url: "/sermons.png",
+        url: "https://omegavisionchristiannetwork.com/sermons.jpeg",
         width: 1200,
         height: 630,
       },
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Sermons | OVCN",
+    title: "OVCN Sermons | OVCN",
     description: "What God is saying now",
-    images: ["/sermons.png"],
+    images: ["https://omegavisionchristiannetwork.com/sermons.jpeg"],
   },
 };
 

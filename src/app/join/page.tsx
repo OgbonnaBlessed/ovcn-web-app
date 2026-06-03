@@ -3,29 +3,27 @@ import JoinClient from "./JoinClient";
 
 export const metadata: Metadata = {
   title: "OVCN Join | OVCN",
-  description:
-    "Explore Omega Vision Christian Network ministries, departments and upcoming programs.",
+  description: "Find your family & grow in purpose",
   openGraph: {
     title: "OVCN Join | OVCN",
-    description:
-      "Explore Omega Vision Christian Network ministries, departments and upcoming programs.",
-    url: "/join",
+    description: "Find your family & grow in purpose",
+    url: "https://omegavisionchristiannetwork.com/join",
     siteName: "OVCN",
     images: [
       {
-        url: "/join.png",
+        url: "https://omegavisionchristiannetwork.com/join.jpeg",
         width: 1200,
         height: 630,
       },
     ],
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
     title: "OVCN Join | OVCN",
-    description:
-      "Explore Omega Vision Christian Network ministries, departments and upcoming programs.",
-    images: ["/join.png"],
+    description: "Find your family & grow in purpose",
+    images: ["https://omegavisionchristiannetwork.com/join.jpeg"],
   },
 };
 
