@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "OVCN",
     images: [
       {
-        url: "https://omegavisionchristiannetwork.com/APG-mentorship-class.jpeg",
+        url: "https://omegavisionchristiannetwork.com/home.jpeg",
         width: 1200,
         height: 630,
       },
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Omega Vision Christian Network",
     description: "EPIKAIZO, atmosphere of worship, deep sound and light",
-    images: ["https://omegavisionchristiannetwork.com/APG-mentorship-class.jpeg"],
+    images: ["https://omegavisionchristiannetwork.com/home.jpeg"],
   },
 };
 
