@@ -10,8 +10,6 @@ const PROGRAMS = [
     id: 1,
     title: "Mentorship Class with Apostle Gabriel Clement",
     current: true,
-    description:
-      "A transformative mentorship experience focused on spiritual growth, wisdom, leadership and purposeful living through biblical teachings and practical guidance.",
     image: "/APG-mentorship-class.jpeg",
   },
 ];
@@ -79,8 +77,8 @@ const UpcomingProgramsCarousel = () => {
   return (
     <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center overflow-hidden">
       <div className="relative flex h-[350px] w-full items-center justify-center overflow-hidden sm:h-[430px] lg:h-[520px]">
-        <div className="pointer-events-none absolute left-0 top-0 z-40 h-full w-16 bg-gradient-to-r from-[#F8F9FB] to-transparent sm:w-28" />
-        <div className="pointer-events-none absolute right-0 top-0 z-40 h-full w-16 bg-gradient-to-l from-[#F8F9FB] to-transparent sm:w-28" />
+        <div className="pointer-events-none absolute left-0 top-0 z-40 h-full w-16 bg-gradient-to-r from-black to-transparent sm:w-28" />
+        <div className="pointer-events-none absolute right-0 top-0 z-40 h-full w-16 bg-gradient-to-l from-black to-transparent sm:w-28" />
 
         {orderedPrograms.map((program, index) => {
           const isCurrent = index === 0;
@@ -163,9 +161,9 @@ const UpcomingProgramsCarousel = () => {
           duration: 0.5,
           ease: "easeOut",
         }}
-        className="pointer-events-auto mt-8 flex min-h-[220px] w-full max-w-3xl flex-col items-center text-center text-black"
+        className="pointer-events-auto mt-8 flex min-h-[220px] w-full max-w-3xl flex-col items-center text-center text-white"
       >
-        <p className="text-xs uppercase tracking-[0.3em] text-accent-foreground">
+        <p className="text-xs uppercase tracking-[0.3em] text-white/50">
           {activeProgram.current ? "(Ongoing)" : "(Upcoming)"}
         </p>
 
@@ -173,12 +171,8 @@ const UpcomingProgramsCarousel = () => {
           {activeProgram.title}
         </h3>
 
-        <p className="mt-4 max-w-xl text-sm leading-7 text-accent-foreground sm:text-base">
-          {activeProgram.description}
-        </p>
-
         <Link href="/about-us">
-          <button className="mt-6 rounded-full bg-blue-700 py-3 px-6 text-sm font-bold text-white hover:bg-blue-600 transition-colors duration-300">
+          <button className="mt-6 rounded-full bg-blue-700 py-3 px-6 text-sm font-bold text-white hover:bg-blue-600 transition-colors duration-300 cursor-pointer">
             Learn more
           </button>
         </Link>

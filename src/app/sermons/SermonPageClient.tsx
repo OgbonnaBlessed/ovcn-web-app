@@ -1,9 +1,9 @@
 "use client";
 
 import Footer from "@/components/shared/Footer";
+import PageHero from "@/components/shared/PageHero";
 import SermonsCardSkeleton from "@/components/ui/skeleton/SermonsCardSkeleton";
 import { sermons } from "@/data/sermons";
-import { fadeInUp } from "@/helper/motion";
 import { formatFullDate } from "@/utils/format-date";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
@@ -79,57 +79,13 @@ const SermonPageClient = () => {
       transition={{ duration: 0.2 }}
       className="w-full max-w-screen overflow-x-hidden scroll-smooth"
     >
-      <section
-        id="sermons-hero"
-        className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-black"
-      >
-        <Image
-          src="/sermons.png"
-          fill
-          alt="Sermons"
-          quality={100}
-          preload
-          className="object-cover object-center"
-        />
-
-        {/* Lighter overlay for better image visibility */}
-        <div className="absolute inset-0 bg-black/10" />
-
-        {/* Soft cinematic gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/45" />
-
-        {/* Subtle edge vignette */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_40%,rgba(0,0,0,0.3)_100%)]" />
-
-        {/* Content */}
-        <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-6xl items-center justify-center px-6 text-center">
-          <motion.div
-            custom={0}
-            initial="hidden"
-            animate="visible"
-            variants={fadeInUp}
-            className="flex flex-col items-center"
-          >
-            <div className="mb-6 h-px w-24 bg-white/50" />
-
-            <p className="mb-5 text-xs font-medium uppercase tracking-[0.35em] text-white/80 md:text-sm">
-              Sermons
-            </p>
-
-            <h1 className="max-w-5xl text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-              EACH SERMON IS A TIMELY WORD FOR LIFE AND PURPOSE
-            </h1>
-
-            <p className="mt-6 max-w-2xl text-sm leading-7 text-white/85 md:text-base md:leading-8">
-              Listen to transformative messages filled with truth, revelation
-              and the power of God.
-            </p>
-          </motion.div>
-        </div>
-
-        {/* Bottom fade */}
-        <div className="absolute bottom-0 left-0 h-32 w-full bg-gradient-to-t from-black/45 to-transparent" />
-      </section>
+      <PageHero
+        eyebrow="Sermons"
+        title="Each sermon is a timely word for life and purpose"
+        description="Listen to transformative messages filled with truth, revelation and the power of God."
+        image="/sermons.jpeg"
+        imageAlt="Sermons"
+      />
 
       <div className="flex flex-col gap-20 py-14 lg:p-20 px-6">
         <div className="w-full flex items-center justify-center">

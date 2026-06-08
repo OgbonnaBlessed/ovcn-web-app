@@ -117,3 +117,30 @@ html {
 html, body {
   overflow-x: hidden;
 }
+
+@property --member-border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes memberBorderSpin {
+  to {
+    --member-border-angle: 360deg;
+  }
+}
+
+.member-cta-border {
+  background:
+    linear-gradient(#081326, #081326) padding-box,
+    conic-gradient(
+      from var(--member-border-angle),
+      #0a2d91,
+      #123ea8,
+      #ff6a00,
+      #ffc500,
+      #0a2d91
+    ) border-box;
+  border: 2px solid transparent;
+  animation: memberBorderSpin 3s linear infinite;
+}

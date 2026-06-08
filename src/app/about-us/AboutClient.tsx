@@ -2,6 +2,7 @@
 
 import CarouselDemo from "@/components/shared/Carousel";
 import Footer from "@/components/shared/Footer";
+import PageHero from "@/components/shared/PageHero";
 import { Button } from "@/components/ui/button";
 import { campuses } from "@/data/locations";
 import { fadeInUp } from "@/helper/motion";
@@ -105,49 +106,13 @@ const AboutClient = () => {
     <>
       <main className="w-full max-w-screen overflow-x-hidden scroll-smooth">
         {/* Hero Section */}
-        <section
-          id="who-we-are"
-          className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-black"
-        >
-          <Image
-            src="/about-us.png"
-            fill
-            alt="About us"
-            priority
-            sizes="100vw"
-            className="object-cover object-center"
-          />
-
-          <div className="absolute inset-0 bg-black/25" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/55" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_25%,rgba(0,0,0,0.45)_100%)]" />
-          <div className="absolute bottom-0 left-0 h-32 w-full bg-gradient-to-t from-black/60 to-transparent" />
-
-          <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-6xl items-center justify-center px-6 text-center">
-            <motion.div
-              custom={0}
-              initial="hidden"
-              animate="visible"
-              variants={fadeInUp}
-              className="flex flex-col items-center"
-            >
-              <div className="mb-6 h-px w-24 bg-white/50" />
-
-              <p className="mb-5 text-xs font-medium uppercase tracking-[0.35em] text-white/70 md:text-sm">
-                About Us
-              </p>
-
-              <h1 className="max-w-5xl text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-                WE ARE A BEACON OF GOD&apos;S LIGHT
-              </h1>
-
-              <p className="mt-6 max-w-2xl text-sm leading-7 text-white/75 md:text-base md:leading-8">
-                Raising believers through worship, the Word and
-                life-transforming encounters with God.
-              </p>
-            </motion.div>
-          </div>
-        </section>
+        <PageHero
+          eyebrow="About us"
+          title="We are a beacon of God’s light"
+          description="Raising believers through worship, the Word and life-transforming encounters with God."
+          image="/about-us.jpeg"
+          imageAlt="About us"
+        />
 
         {/* Story / Vision / Mission */}
         <section className="relative w-full overflow-hidden bg-white px-6 py-24 lg:px-20">

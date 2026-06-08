@@ -3,10 +3,12 @@
 
 import Footer from "@/components/shared/Footer";
 import JoinSheet from "@/components/shared/JoinSheet";
+import PageHero from "@/components/shared/PageHero";
 import UpcomingProgramsCarousel from "@/components/shared/UpcomingProgramsCarousel";
 import { fadeInUp } from "@/helper/motion";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const joinSections = [
   {
@@ -55,46 +57,13 @@ const JoinClient = () => {
   return (
     <>
       <main className="w-full max-w-screen overflow-x-hidden scroll-smooth">
-        <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-black">
-          <Image
-            src="/join.png"
-            fill
-            alt="Join"
-            quality={100}
-            priority
-            className="object-cover object-center"
-          />
-
-          <div className="absolute inset-0 bg-black/25" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/55" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_25%,rgba(0,0,0,0.45)_100%)]" />
-          <div className="absolute bottom-0 left-0 h-32 w-full bg-gradient-to-t from-black/60 to-transparent" />
-
-          <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-6xl items-center justify-center px-6 text-center">
-            <motion.div
-              custom={0}
-              initial="hidden"
-              animate="visible"
-              variants={fadeInUp}
-              className="flex flex-col items-center"
-            >
-              <div className="mb-6 h-px w-24 bg-white/50" />
-
-              <p className="mb-5 text-xs font-medium uppercase tracking-[0.35em] text-white/70 md:text-sm">
-                Join
-              </p>
-
-              <h1 className="max-w-5xl text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-                FIND YOUR FAMILY, GROW IN PURPOSE
-              </h1>
-
-              <p className="mt-6 max-w-2xl text-sm leading-7 text-white/75 md:text-base md:leading-8">
-                There is a place for you at Omega Vision Christian Network.
-                Connect, grow, serve and walk with others in faith.
-              </p>
-            </motion.div>
-          </div>
-        </section>
+        <PageHero
+          eyebrow="Join"
+          title="Find your family, grow in purpose"
+          description="There is a place for you at Omega Vision Christian Network. Connect, grow, serve and walk with others in faith."
+          image="/join.jpeg"
+          imageAlt="Join"
+        />
 
         <section className="w-full px-6 py-20 lg:px-20">
           <div className="mx-auto flex w-full max-w-7xl flex-col gap-20">
@@ -173,7 +142,7 @@ const JoinClient = () => {
           </div>
         </section>
 
-        <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-[#F8F9FB] px-5 py-20 sm:px-6 sm:py-24 lg:px-20">
+        <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-black px-5 py-20 sm:px-6 sm:py-24 lg:px-20">
           <div className="flex w-full max-w-7xl flex-col items-center">
             <motion.div
               custom={0}
@@ -183,24 +152,51 @@ const JoinClient = () => {
               variants={fadeInUp}
               className="text-center"
             >
-              <p className="text-xs uppercase tracking-[0.25em] text-accent-foreground sm:text-sm sm:tracking-[0.3em]">
+              <p className="text-xs uppercase tracking-[0.25em] text-white/60 sm:text-sm sm:tracking-[0.3em]">
                 Upcoming Programs
               </p>
 
-              <h2 className="mt-4 text-4xl font-bold leading-tight text-black sm:text-5xl lg:text-7xl">
+              <h2 className="mt-4 text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-7xl">
                 Moments You Shouldn&apos;t Miss
               </h2>
-
-              <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-accent-foreground sm:text-base sm:leading-8">
-                Stay connected to upcoming gatherings, meetings and special
-                programs at Omega Vision Christian Network.
-              </p>
             </motion.div>
 
-            <div className="mt-12 w-full sm:mt-16 lg:mt-20">
+            <div className="w-full">
               <UpcomingProgramsCarousel />
             </div>
           </div>
+        </section>
+
+        <section className="relative overflow-hidden bg-[#F4EFE7] px-6 py-24 lg:px-20">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.75),transparent_62%)]" />
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeInUp}
+            custom={0}
+            className="relative mx-auto flex max-w-3xl flex-col items-center text-center"
+          >
+            <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#0A2D91]/70">
+              Membership
+            </p>
+
+            <h2 className="mt-4 text-4xl font-bold tracking-tight text-[#081326] sm:text-5xl lg:text-6xl">
+              Become a Member
+            </h2>
+
+            <p className="mt-5 max-w-xl text-sm leading-7 text-[#081326]/65 md:text-base md:leading-8">
+              Join the family, grow in faith, and walk in purpose.
+            </p>
+
+            <Link
+              href="/membership"
+              className="member-cta-border mt-9 inline-flex rounded-full px-8 py-4 text-sm font-semibold uppercase tracking-[0.22em] text-white transition-transform duration-300"
+            >
+              Become a Member
+            </Link>
+          </motion.div>
         </section>
       </main>
 

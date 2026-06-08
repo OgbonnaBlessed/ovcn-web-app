@@ -47,6 +47,11 @@ const departments = [
   "Sanitation",
 ];
 
+const membership = [
+  "Yes, I am a member",
+  "No, I am new",
+]
+
 const JoinSheet = ({ type, buttonText, programTitle }: JoinSheetProps) => {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -287,6 +292,28 @@ const JoinSheet = ({ type, buttonText, programTitle }: JoinSheetProps) => {
               </SelectContent>
             </Select>
           )}
+
+          <Select
+            value={formData.department}
+            onValueChange={(value) => updateField("department", value)}
+            disabled={loading}
+          >
+            <SelectTrigger className="h-11 w-full rounded-md">
+              <SelectValue placeholder="Are you a member?" />
+            </SelectTrigger>
+
+            <SelectContent className="w-fit rounded-xl border bg-background p-1 shadow-xl">
+              {membership.map((option) => (
+                <SelectItem
+                  key={option}
+                  value={option}
+                  className="cursor-pointer rounded-lg"
+                >
+                  {option}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
 
           <Textarea
             rows={5}

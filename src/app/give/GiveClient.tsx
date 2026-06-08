@@ -2,6 +2,7 @@
 
 import Footer from "@/components/shared/Footer";
 import Give from "@/components/shared/Give";
+import PageHero from "@/components/shared/PageHero";
 import { PartnerSheet } from "@/components/shared/PartnerSheet";
 import ProjectsCarousel from "@/components/shared/ProjectsCarousel";
 import { fadeInUp } from "@/helper/motion";
@@ -12,60 +13,14 @@ const GiveClient = () => {
   return (
     <>
       <div className="w-full max-w-screen overflow-x-hidden scroll-smooth">
-        <section
-          id="partnership"
-          className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-black"
-        >
-          <Image
-            src="/give.png"
-            fill
-            alt="Partnership"
-            quality={100}
-            preload
-            className="object-cover object-center"
-          />
 
-          {/* Base dark overlay */}
-          <div className="absolute inset-0 bg-black/25" />
-
-          {/* Soft cinematic gradient */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/55" />
-
-          {/* Warm golden glow */}
-          <div className="absolute left-1/2 top-1/2 h-[360px] w-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#f5b942]/12 blur-3xl md:h-[520px] md:w-[520px]" />
-
-          {/* Edge vignette */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_25%,rgba(0,0,0,0.45)_100%)]" />
-
-          {/* Content */}
-          <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-6xl items-center justify-center px-6 text-center">
-            <motion.div
-              custom={0}
-              initial="hidden"
-              animate="visible"
-              variants={fadeInUp}
-              className="flex flex-col items-center"
-            >
-              <div className="mb-6 h-px w-24 bg-white/50" />
-
-              <p className="mb-5 text-xs font-medium uppercase tracking-[0.35em] text-white/70 md:text-sm">
-                Give
-              </p>
-
-              <h1 className="max-w-5xl text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-                PARTNER WITH US IN ADVANCING GOD&apos;S KINGDOM
-              </h1>
-
-              <p className="mt-6 max-w-2xl text-sm leading-7 text-white/75 md:text-base md:leading-8">
-                Support the work of the ministry as we spread the Gospel and
-                impact lives across communities.
-              </p>
-            </motion.div>
-          </div>
-
-          {/* Bottom fade into next section */}
-          <div className="absolute bottom-0 left-0 h-32 w-full bg-gradient-to-t from-black/60 to-transparent" />
-        </section>
+        <PageHero
+          eyebrow="Give"
+          title="Partner with Us in Advancing God&apos;s Kingdom"
+          description="Support the work of the ministry as we spread the Gospel and impact lives across communities."
+          image="/give.jpeg"
+          imageAlt="Give"
+        />
 
         <section className="min-h-screen w-full flex items-center justify-center">
           <div className="flex flex-col gap-10 items-center py-14 px-6 lg:p-20">
