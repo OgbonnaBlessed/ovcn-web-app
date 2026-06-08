@@ -13,7 +13,6 @@ const GiveClient = () => {
   return (
     <>
       <div className="w-full max-w-screen overflow-x-hidden scroll-smooth">
-
         <PageHero
           eyebrow="Give"
           title="Partner with Us in Advancing God&apos;s Kingdom"

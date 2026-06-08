@@ -229,7 +229,7 @@ const ContactClient = () => {
               <Button
                 type="submit"
                 disabled={loading}
-                className="w-fit self-start cursor-pointer rounded-full px-8 py-5 active:scale-95 transition-all duration-300 ease-in-out disabled:opacity-70 disabled:cursor-not-allowed"
+                className="w-fit rounded-full bg-blue-700 px-7 py-6 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 transition-all duration-300 hover:bg-blue-700 hover:opacity-95 cursor-pointer disabled:cursor-not-allowed"
               >
                 {loading ? "Sending..." : "Submit"}
               </Button>

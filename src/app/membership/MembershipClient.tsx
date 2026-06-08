@@ -374,7 +374,7 @@ const MembershipPage = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="mt-7 inline-flex rounded-full bg-blue-700 px-7 py-4 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-lg shadow-blue-600/20 transition hover:bg-blue-800 disabled:cursor-not-allowed disabled:opacity-60"
+                className="mt-7 inline-flex rounded-full bg-blue-700 px-7 py-4 text-sm font-semibold tracking-[0.16em] text-white shadow-lg shadow-blue-600/20 transition hover:bg-blue-800 disabled:cursor-not-allowed disabled:opacity-60"
               >
                 {isSubmitting ? "Submitting..." : "Submit Membership"}
               </button>

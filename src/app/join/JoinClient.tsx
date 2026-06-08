@@ -178,7 +178,7 @@ const JoinClient = () => {
             custom={0}
             className="relative mx-auto flex max-w-3xl flex-col items-center text-center"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#0A2D91]/70">
+            <p className="text-xs font-medium uppercase tracking-[0.3em] text-accent-foreground">
               Membership
             </p>
 
@@ -192,7 +192,7 @@ const JoinClient = () => {
 
             <Link
               href="/membership"
-              className="member-cta-border mt-9 inline-flex rounded-full px-8 py-4 text-sm font-semibold uppercase tracking-[0.22em] text-white transition-transform duration-300"
+              className="member-cta-border mt-9 inline-flex rounded-full px-8 py-4 text-sm font-semibold uppercase tracking-[0.22em] text-white transition-transform duration-300 bg-blue-700"
             >
               Become a Member
             </Link>

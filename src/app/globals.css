@@ -132,7 +132,7 @@ html, body {
 
 .member-cta-border {
   background:
-    linear-gradient(#081326, #081326) padding-box,
+    linear-gradient(#1447e6, #1447e6) padding-box,
     conic-gradient(
       from var(--member-border-angle),
       #0a2d91,
@@ -142,5 +142,6 @@ html, body {
       #0a2d91
     ) border-box;
   border: 2px solid transparent;
+  box-shadow: 0 0 8px #155dfc, 0 0 16px #155dfc;
   animation: memberBorderSpin 3s linear infinite;
 }
