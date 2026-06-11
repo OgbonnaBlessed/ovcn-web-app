@@ -3,6 +3,7 @@
 import Footer from "@/components/shared/Footer";
 import PageHero from "@/components/shared/PageHero";
 import SermonsCardSkeleton from "@/components/ui/skeleton/SermonsCardSkeleton";
+import SpotifyPodcastCard from "@/components/shared/SpotifyPodcastCard";
 import { sermons } from "@/data/sermons";
 import { formatFullDate } from "@/utils/format-date";
 import { AnimatePresence, motion } from "framer-motion";
@@ -147,6 +148,8 @@ const SermonPageClient = () => {
             </AnimatePresence>
           </div>
         </div>
+
+        <SpotifyPodcastCard />
 
         <div className="flex flex-col gap-5 md:gap-10">
           <h1 className="lg:text-5xl text-3xl font-bold">Featured Sermons</h1>
