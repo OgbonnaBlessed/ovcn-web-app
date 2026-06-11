@@ -197,11 +197,11 @@ const SermonPageClient = () => {
                   </motion.div>
                 ))}
               </AnimatePresence>
+               <SpotifyPodcastCard />
             </div>
           )}
         </div>
       </div>
- <SpotifyPodcastCard />
       <Footer />
     </motion.div>
   );
