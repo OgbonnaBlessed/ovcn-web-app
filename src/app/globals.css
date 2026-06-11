@@ -142,6 +142,6 @@ html, body {
       #0a2d91
     ) border-box;
   border: 2px solid transparent;
-  /* box-shadow: 0 0 8px #155dfc, 0 0 16px #155dfc; */
+  box-shadow: 0 0 8px #155dfc, 0 0 16px #155dfc;
   animation: memberBorderSpin 3s linear infinite;
 }
