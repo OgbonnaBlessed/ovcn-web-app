@@ -40,7 +40,7 @@ const OnlineClient = () => {
           eyebrow="Join us online"
           title="Each Service is a Kairos Moment for Life and Purpose"
           description="Worship with us live from anywhere in the world and experience the presence of God together as one family."
-          image="/online.jpeg"
+          image="/join-us-online.jpeg"
           imageAlt="Join us online"
         />
 

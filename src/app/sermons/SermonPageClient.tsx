@@ -4,6 +4,7 @@ import Footer from "@/components/shared/Footer";
 import PageHero from "@/components/shared/PageHero";
 import SpotifyCard from "@/components/shared/SpotifyCard";
 import SermonsCardSkeleton from "@/components/ui/skeleton/SermonsCardSkeleton";
+import SpotifyPodcastCard from "@/components/shared/SpotifyPodcastCard";
 import { sermons } from "@/data/sermons";
 import { formatFullDate } from "@/utils/format-date";
 import { AnimatePresence, motion } from "framer-motion";
@@ -197,6 +198,7 @@ const SermonPageClient = () => {
                   </motion.div>
                 ))}
               </AnimatePresence>
+               <SpotifyPodcastCard />
             </div>
           )}
         </div>
