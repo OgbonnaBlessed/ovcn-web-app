@@ -167,7 +167,9 @@ const UpcomingProgramsCarousel = () => {
           {activeProgram.current ? "(Ongoing)" : "(Upcoming)"}
         </p>
 
-        <h3 className="mt-4 text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
+        <div className="mt-4 h-px w-12 bg-white/15" />
+
+        <h3 className="mt-5 max-w-2xl text-balance text-2xl font-medium leading-[1.15] tracking-[-0.025em] text-white sm:text-3xl lg:text-4xl">
           {activeProgram.title}
         </h3>
 
