@@ -53,12 +53,6 @@ const PageHero = ({
       </motion.div>
 
       <div className="absolute inset-0 bg-black/45" />
-      <div
-        className="absolute inset-0"
-        style={{
-          background: `linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(7,11,24,0.45), ${bottomColor})`,
-        }}
-      /> 
       {glowVariant === "membership" ? (
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(10,45,145,0.35),transparent_35%),radial-gradient(circle_at_top,rgba(255,197,0,0.18),transparent_30%)]" />
       ) : (
