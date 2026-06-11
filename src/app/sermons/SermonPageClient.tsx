@@ -2,6 +2,7 @@
 
 import Footer from "@/components/shared/Footer";
 import PageHero from "@/components/shared/PageHero";
+import SpotifyCard from "@/components/shared/SpotifyCard";
 import SermonsCardSkeleton from "@/components/ui/skeleton/SermonsCardSkeleton";
 import { sermons } from "@/data/sermons";
 import { formatFullDate } from "@/utils/format-date";
@@ -199,6 +200,8 @@ const SermonPageClient = () => {
             </div>
           )}
         </div>
+        
+        <SpotifyCard />
       </div>
       <Footer />
     </motion.div>
