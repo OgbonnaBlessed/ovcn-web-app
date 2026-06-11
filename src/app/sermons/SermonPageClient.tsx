@@ -149,8 +149,6 @@ const SermonPageClient = () => {
           </div>
         </div>
 
-        <SpotifyPodcastCard />
-
         <div className="flex flex-col gap-5 md:gap-10">
           <h1 className="lg:text-5xl text-3xl font-bold">Featured Sermons</h1>
 
@@ -203,6 +201,7 @@ const SermonPageClient = () => {
           )}
         </div>
       </div>
+ <SpotifyPodcastCard />
       <Footer />
     </motion.div>
   );
